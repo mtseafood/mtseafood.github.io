@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Frist  By Hexo</title>
-    <url>/2024/08/24/Frist-By-Hexo/</url>
+    <url>/hexo-tutorial/Frist-By-Hexo/</url>
     <content><![CDATA[<p>Hello, world!</p>
 ]]></content>
       <categories>
@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <title>Pytest Fixture</title>
-    <url>/2024/08/24/Pytest-Fixture/</url>
+    <url>/Pytest/Pytest-Fixture/</url>
     <content><![CDATA[<h1 id="Understanding-Pytest-Fixtures-A-Comprehensive-Guide"><a href="#Understanding-Pytest-Fixtures-A-Comprehensive-Guide" class="headerlink" title="Understanding Pytest Fixtures: A Comprehensive Guide"></a>Understanding Pytest Fixtures: A Comprehensive Guide</h1><h2 id="What-is-a-Fixture"><a href="#What-is-a-Fixture" class="headerlink" title="What is a Fixture?"></a>What is a Fixture?</h2><p>A fixture in <code>pytest</code> is a function that sets up some context or state for your tests. It allows you to create reusable test setups, reducing code duplication and improving test clarity. Fixtures can manage resources like database connections, file handles, or any other setup needed for your tests.</p>
 <h2 id="Defining-Fixtures"><a href="#Defining-Fixtures" class="headerlink" title="Defining Fixtures"></a>Defining Fixtures</h2><p>To define a fixture, use the <code>@pytest.fixture</code> decorator. Here’s a simple example:</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sample_data</span>():</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
@@ -78,7 +78,7 @@
   </entry>
   <entry>
     <title>Python Testing</title>
-    <url>/2024/08/24/Python-Testing/</url>
+    <url>/Pytest/Python-Testing/</url>
     <content><![CDATA[<h1 id="A-Beginner’s-Guide-to-Python-Unit-Testing-with-Pytest"><a href="#A-Beginner’s-Guide-to-Python-Unit-Testing-with-Pytest" class="headerlink" title="A Beginner’s Guide to Python Unit Testing with Pytest"></a>A Beginner’s Guide to Python Unit Testing with Pytest</h1><p>Unit testing is an essential practice in software development that helps ensure your code behaves as expected. This guide will introduce you to the basics of unit testing in Python using the <code>pytest</code> framework.</p>
 <h2 id="What-is-Unit-Testing"><a href="#What-is-Unit-Testing" class="headerlink" title="What is Unit Testing?"></a>What is Unit Testing?</h2><p>Unit testing involves testing individual components of your code (usually functions or classes) to verify that they work correctly. This practice helps catch bugs early and makes your code more maintainable.</p>
 <h2 id="Why-Unit-Test"><a href="#Why-Unit-Test" class="headerlink" title="Why Unit Test?"></a>Why Unit Test?</h2><ul>
