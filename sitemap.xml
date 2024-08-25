@@ -81,20 +81,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/pytest/</loc>
-    <lastmod>2024-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/fixtures/</loc>
-    <lastmod>2024-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/tests/</loc>
     <lastmod>2024-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -102,7 +88,21 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/pytest/</loc>
+    <lastmod>2024-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/unit-tests/</loc>
+    <lastmod>2024-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/fixtures/</loc>
     <lastmod>2024-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
