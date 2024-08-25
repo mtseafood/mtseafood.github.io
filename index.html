@@ -228,7 +228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-25 14:08:02" itemprop="dateModified" datetime="2024-08-25T14:08:02+08:00">2024-08-25</time>
+      <time title="Modified: 2024-08-25 14:35:17" itemprop="dateModified" datetime="2024-08-25T14:35:17+08:00">2024-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -250,61 +250,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Understanding-Pytest-Fixtures-A-Comprehensive-Guide"><a href="#Understanding-Pytest-Fixtures-A-Comprehensive-Guide" class="headerlink" title="Understanding Pytest Fixtures: A Comprehensive Guide"></a>Understanding Pytest Fixtures: A Comprehensive Guide</h1><h2 id="What-is-a-Fixture"><a href="#What-is-a-Fixture" class="headerlink" title="What is a Fixture?"></a>What is a Fixture?</h2><p>A fixture in <code>pytest</code> is a function that sets up some context or state for your tests. It allows you to create reusable test setups, reducing code duplication and improving test clarity. Fixtures can manage resources like database connections, file handles, or any other setup needed for your tests.</p>
-<h2 id="Defining-Fixtures"><a href="#Defining-Fixtures" class="headerlink" title="Defining Fixtures"></a>Defining Fixtures</h2><p>To define a fixture, use the <code>@pytest.fixture</code> decorator. Here’s a simple example:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sample_data</span>():</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
-
-<h2 id="Using-Fixtures-in-Tests"><a href="#Using-Fixtures-in-Tests" class="headerlink" title="Using Fixtures in Tests"></a>Using Fixtures in Tests</h2><p>You can use a fixture by including it as an argument in your test function:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test_sum</span>(<span class="params">sample_data</span>):</span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">sum</span>(sample_data) == <span class="number">15</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Fixture-Scope"><a href="#Fixture-Scope" class="headerlink" title="Fixture Scope"></a>Fixture Scope</h2><p>Fixtures can have different scopes that determine how often they are invoked:</p>
-<ul>
-<li>function: (default) invoked for each test function.</li>
-<li>class: invoked once per test class.</li>
-<li>module: invoked once per module.</li>
-<li>session: invoked once per session.</li>
-</ul>
-<ol>
-<li><p>Function Scope (Default)<br>This is the default scope. The fixture is invoked for each test function that uses it.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">function_fixture</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up function fixture&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down function fixture&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_one</span>(<span class="params">function_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_one&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_two</span>(<span class="params">function_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_two&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p> Output:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Setting up function fixture</span><br><span class="line">Running test_one</span><br><span class="line">Tearing down function fixture</span><br><span class="line">Setting up function fixture</span><br><span class="line">Running test_two</span><br><span class="line">Tearing down function fixture</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Class Scope<br>The fixture is invoked once per test class. It can be shared among all test methods in the class.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&#x27;class&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">class_fixture</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up class fixture&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down class fixture&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestClass</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_one</span>(<span class="params">self, class_fixture</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Running TestClass.test_one&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_two</span>(<span class="params">self, class_fixture</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Running TestClass.test_two&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p> Output:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Setting up class fixture</span><br><span class="line">Running TestClass.test_one</span><br><span class="line">Running TestClass.test_two</span><br><span class="line">Tearing down class fixture</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Module Scope<br>The fixture is invoked once per module. It can be shared among all test functions in the module.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&#x27;module&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">module_fixture</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up module fixture&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down module fixture&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_one</span>(<span class="params">module_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_one&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_two</span>(<span class="params">module_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_two&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p> Output:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Setting up module fixture</span><br><span class="line">Running test_one</span><br><span class="line">Running test_two</span><br><span class="line">Tearing down module fixture</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Session Scope<br>The fixture is invoked once per session. This means it will be shared across all tests in the entire test run.</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&#x27;session&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">session_fixture</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up session fixture&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down session fixture&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_one</span>(<span class="params">session_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_one&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_two</span>(<span class="params">session_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_two&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p> Output:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Setting up session fixture</span><br><span class="line">Running test_one</span><br><span class="line">Running test_two</span><br><span class="line">Tearing down session fixture</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="Yielding-Fixtures"><a href="#Yielding-Fixtures" class="headerlink" title="Yielding Fixtures"></a>Yielding Fixtures</h3><p>Using yield in fixtures allows you to separate setup and teardown logic. Code before yield runs before the test, and code after runs after:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">resource</span>():</span><br><span class="line">    res = create_resource()</span><br><span class="line">    <span class="keyword">yield</span> res</span><br><span class="line">    res.cleanup()</span><br></pre></td></tr></table></figure>
-
-<h3 id="Parameterized-Fixtures"><a href="#Parameterized-Fixtures" class="headerlink" title="Parameterized Fixtures"></a>Parameterized Fixtures</h3><p>Parameterized fixtures allow you to run a test with multiple sets of data:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture(<span class="params">params=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">param_fixture</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> request.param</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_parameterized</span>(<span class="params">param_fixture</span>):</span><br><span class="line">    <span class="keyword">assert</span> param_fixture <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-
-<h3 id="Autouse-Fixtures"><a href="#Autouse-Fixtures" class="headerlink" title="Autouse Fixtures"></a>Autouse Fixtures</h3><p>If you want a fixture to be automatically used by tests without explicitly including it, set autouse&#x3D;True:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture(<span class="params">autouse=<span class="literal">True</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">setup_environment</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up environment&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down environment&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Best-Practices-for-Using-Fixtures"><a href="#Best-Practices-for-Using-Fixtures" class="headerlink" title="Best Practices for Using Fixtures"></a>Best Practices for Using Fixtures</h2><ol>
-<li><strong>Keep Fixtures Focused</strong>: Each fixture should handle a specific setup. This makes them easier to understand and reuse.</li>
-<li><strong>Use Descriptive Names</strong>: Name your fixtures clearly to indicate their purpose.</li>
-<li><strong>Avoid Global State</strong>: Ensure your fixtures do not rely on or modify global state to prevent side effects in tests.</li>
-<li><strong>Combine Fixtures</strong>: You can use multiple fixtures in a single test by including them as parameters.</li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Fixtures are an essential feature in <code>pytest</code> that can greatly enhance your testing strategy. By leveraging fixtures, you can write cleaner, more maintainable tests while reducing redundancy. For further exploration, refer to the <a target="_blank" rel="noopener" href="https://docs.pytest.org/en/stable/">official pytest documentation</a>.</p>
-
+          <p>In this article we will talk more about the pytest fixture</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/24/Pytest-Fixture/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -366,7 +320,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-25 14:08:10" itemprop="dateModified" datetime="2024-08-25T14:08:10+08:00">2024-08-25</time>
+      <time title="Modified: 2024-08-25 14:36:06" itemprop="dateModified" datetime="2024-08-25T14:36:06+08:00">2024-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -388,48 +342,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="A-Beginner’s-Guide-to-Python-Unit-Testing-with-Pytest"><a href="#A-Beginner’s-Guide-to-Python-Unit-Testing-with-Pytest" class="headerlink" title="A Beginner’s Guide to Python Unit Testing with Pytest"></a>A Beginner’s Guide to Python Unit Testing with Pytest</h1><p>Unit testing is an essential practice in software development that helps ensure your code behaves as expected. This guide will introduce you to the basics of unit testing in Python using the <code>pytest</code> framework.</p>
-<h2 id="What-is-Unit-Testing"><a href="#What-is-Unit-Testing" class="headerlink" title="What is Unit Testing?"></a>What is Unit Testing?</h2><p>Unit testing involves testing individual components of your code (usually functions or classes) to verify that they work correctly. This practice helps catch bugs early and makes your code more maintainable.</p>
-<h2 id="Why-Unit-Test"><a href="#Why-Unit-Test" class="headerlink" title="Why Unit Test?"></a>Why Unit Test?</h2><ul>
-<li><strong>Catch Bugs Early</strong>: Identify issues before they become larger problems.</li>
-<li><strong>Simplify Integration</strong>: Ensure that each part of your code works independently.</li>
-<li><strong>Facilitate Refactoring</strong>: Make changes to your code with confidence that existing functionality is preserved.</li>
-<li><strong>Documentation</strong>: Provide examples of how your code is intended to be used.</li>
-</ul>
-<h2 id="Introducing-Pytest"><a href="#Introducing-Pytest" class="headerlink" title="Introducing Pytest"></a>Introducing Pytest</h2><p><code>pytest</code> is a popular testing framework for Python that makes it easy to write simple and scalable test cases. It offers powerful features like fixtures, parameterized testing, and a rich ecosystem of plugins.</p>
-<h3 id="Installing-Pytest"><a href="#Installing-Pytest" class="headerlink" title="Installing Pytest"></a>Installing Pytest</h3><p>To get started with <code>pytest</code>, you need to install it. You can do this using pip:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytest</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="Getting-Started-with-Pytest"><a href="#Getting-Started-with-Pytest" class="headerlink" title="Getting Started with Pytest"></a>Getting Started with Pytest</h3><ol>
-<li><p>Writing Your First Test<br>Here’s a simple example. Suppose you have a function that adds two numbers:</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># calculator.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br></pre></td></tr></table></figure>
-
-<p> Now, let’s write a unit test for this function using pytest:</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test_calculator.py</span></span><br><span class="line"><span class="keyword">from</span> calculator <span class="keyword">import</span> add</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_add</span>():</span><br><span class="line">    <span class="keyword">assert</span> add(<span class="number">1</span>, <span class="number">2</span>) == <span class="number">3</span></span><br><span class="line">    <span class="keyword">assert</span> add(-<span class="number">1</span>, <span class="number">1</span>) == <span class="number">0</span></span><br><span class="line">    <span class="keyword">assert</span> add(<span class="number">0</span>, <span class="number">0</span>) == <span class="number">0</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Running Your Tests<br>To run your tests, open your terminal, navigate to the directory containing your test_calculator.py file, and execute:</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pytest</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>You should see output indicating whether your tests passed or failed.</p>
-<ol start="3">
-<li>Writing More Tests<br>As your codebase grows, you’ll want to write more tests. Here are some tips:<ul>
-<li><p>Test Functions: Each test should be a standalone function prefixed with test_.</p>
-</li>
-<li><p>Fixtures: Use fixtures to set up any necessary state or dependencies for your tests.</p>
-<p>  Example of Using Fixtures</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"><span class="keyword">from</span> calculator <span class="keyword">import</span> add</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">numbers</span>():</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_add</span>(<span class="params">numbers</span>):</span><br><span class="line">    a, b = numbers</span><br><span class="line">    <span class="keyword">assert</span> add(a, b) == <span class="number">15</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ol>
-<h3 id="Best-Practices-for-Unit-Testing-with-Pytest"><a href="#Best-Practices-for-Unit-Testing-with-Pytest" class="headerlink" title="Best Practices for Unit Testing with Pytest"></a>Best Practices for Unit Testing with Pytest</h3><ul>
-<li>Keep Tests Isolated: Each test should be independent of others.</li>
-<li>Name Your Tests Clearly: Use descriptive names for your test functions.</li>
-<li>Run Tests Frequently: Integrate running tests into your development workflow.</li>
-<li>Use Plugins: Explore pytest plugins for additional functionality.</li>
-</ul>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Unit testing is a powerful tool that helps maintain code quality. By following this guide and using pytest, you can start writing your own unit tests in Python, ensuring that your code is reliable and easier to maintain.</p>
-
+          <p>This is the article for those interested in Python testing but don't have experience beginners.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/24/Python-Testing/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

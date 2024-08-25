@@ -126,8 +126,9 @@
       </categories>
       <tags>
         <tag>python</tag>
+        <tag>pytest</tag>
         <tag>tests</tag>
-        <tag>pytestunit tests</tag>
+        <tag>unit tests</tag>
       </tags>
   </entry>
 </search>
