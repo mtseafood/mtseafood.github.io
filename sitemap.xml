@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/uncategorized/Pytest-Extension/</loc>
+    
+    <lastmod>2024-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/Pytest/Pytest-Fixture/</loc>
+    
+    <lastmod>2024-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/google3d7e2447849ebf84</loc>
     
     <lastmod>2024-08-25</lastmod>
@@ -12,15 +30,6 @@
   
   <url>
     <loc>http://example.com/Pytest/Python-Testing/</loc>
-    
-    <lastmod>2024-08-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/Pytest/Pytest-Fixture/</loc>
     
     <lastmod>2024-08-25</lastmod>
     
@@ -81,14 +90,21 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/tests/</loc>
+    <loc>http://example.com/tags/pytest/</loc>
     <lastmod>2024-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/pytest/</loc>
+    <loc>http://example.com/tags/fixtures/</loc>
+    <lastmod>2024-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/tests/</loc>
     <lastmod>2024-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -102,7 +118,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/fixtures/</loc>
+    <loc>http://example.com/tags/plugin/</loc>
     <lastmod>2024-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
