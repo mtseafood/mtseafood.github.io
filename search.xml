@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Frist  By Hexo</title>
-    <url>/hexo-tutorial/Frist-By-Hexo/</url>
-    <content><![CDATA[<p>Hello, world!</p>
-]]></content>
-      <categories>
-        <category>hexo tutorial</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Pytest Extension</title>
     <url>/Pytest/Pytest-Extension/</url>
     <content><![CDATA[<h1 id="pytest-related-Packages"><a href="#pytest-related-Packages" class="headerlink" title="pytest-related Packages"></a>pytest-related Packages</h1><h2 id="pytest-xdist"><a href="#pytest-xdist" class="headerlink" title="pytest-xdist"></a>pytest-xdist</h2><p><code>pytest-xdist</code> is a plugin for pytest that allows you to run your tests in parallel across multiple CPUs or even on remote machines. This can significantly speed up your test execution time, especially for large test suites.</p>
@@ -37,6 +28,15 @@
         <tag>pytest</tag>
         <tag>plugin</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Frist  By Hexo</title>
+    <url>/hexo-tutorial/Frist-By-Hexo/</url>
+    <content><![CDATA[<p>Hello, world!</p>
+]]></content>
+      <categories>
+        <category>hexo tutorial</category>
+      </categories>
   </entry>
   <entry>
     <title>Pytest Fixture</title>
