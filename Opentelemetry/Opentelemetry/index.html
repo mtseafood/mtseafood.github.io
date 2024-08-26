@@ -20,24 +20,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Carter&#39;s Notes">
-<meta property="og:url" content="http://example.com/">
+    <meta name="description" content="OpenTelemetry: Logs, Traces, and MetricsOpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of da">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Opentelemetry">
+<meta property="og:url" content="http://example.com/Opentelemetry/Opentelemetry/">
 <meta property="og:site_name" content="Carter&#39;s Notes">
+<meta property="og:description" content="OpenTelemetry: Logs, Traces, and MetricsOpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of da">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-08-26T12:41:03.000Z">
+<meta property="article:modified_time" content="2024-08-26T12:55:21.549Z">
 <meta property="article:author" content="Carter Lin">
-<meta property="article:tag" content="Software Engineer">
+<meta property="article:tag" content="opentelemetry">
+<meta property="article:tag" content="logs">
+<meta property="article:tag" content="traces">
+<meta property="article:tag" content="metrics">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/Opentelemetry/Opentelemetry/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/Opentelemetry/Opentelemetry/","path":"Opentelemetry/Opentelemetry/","title":"Opentelemetry"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Carter's Notes</title>
+<title>Opentelemetry | Carter's Notes</title>
   
 
 
@@ -70,7 +77,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Carter's Notes</h1>
+      <p class="site-title">Carter's Notes</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -123,7 +130,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -136,6 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OpenTelemetry-Logs-Traces-and-Metrics"><span class="nav-number">1.</span> <span class="nav-text">OpenTelemetry: Logs, Traces, and Metrics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Logging"><span class="nav-number">1.1.</span> <span class="nav-text">Logging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Concepts"><span class="nav-number">1.1.1.</span> <span class="nav-text">Key Concepts:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Example"><span class="nav-number">1.1.2.</span> <span class="nav-text">Python Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tracing"><span class="nav-number">1.2.</span> <span class="nav-text">Tracing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Concepts-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Key Concepts:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Example-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Python Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Metrics"><span class="nav-number">1.3.</span> <span class="nav-text">Metrics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Concepts-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Key Concepts:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Example-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">Python Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">1.4.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -183,16 +191,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/Opentelemetry/Opentelemetry/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -206,13 +215,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Carter's Notes">
+      <meta itemprop="name" content="Opentelemetry | Carter's Notes">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Opentelemetry/Opentelemetry/" class="post-title-link" itemprop="url">Opentelemetry</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Opentelemetry
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -236,6 +245,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
 </div>
 
         </div>
@@ -244,8 +260,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="OpenTelemetry-Logs-Traces-and-Metrics"><a href="#OpenTelemetry-Logs-Traces-and-Metrics" class="headerlink" title="OpenTelemetry: Logs, Traces, and Metrics"></a>OpenTelemetry: Logs, Traces, and Metrics</h1><p>OpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of data: logs, traces, and metrics. Below is a detailed explanation of each, along with a Python example.</p>
+    <div class="post-body" itemprop="articleBody"><h1 id="OpenTelemetry-Logs-Traces-and-Metrics"><a href="#OpenTelemetry-Logs-Traces-and-Metrics" class="headerlink" title="OpenTelemetry: Logs, Traces, and Metrics"></a>OpenTelemetry: Logs, Traces, and Metrics</h1><p>OpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of data: logs, traces, and metrics. Below is a detailed explanation of each, along with a Python example.</p>
 <h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>Logging captures detailed information about events and messages occurring within your application.</p>
 <h3 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
 <li><strong>Logger</strong>: Used to create and manage log records.</li>
@@ -285,7 +300,6 @@
 </ul>
 <p>By using OpenTelemetry with Python, you can effectively gather and analyze these three types of observability data, leading to better insights into your application’s performance and behavior.</p>
 
-      
     </div>
 
     
@@ -293,363 +307,24 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/opentelemetry/" rel="tag"># opentelemetry</a>
+              <a href="/tags/logs/" rel="tag"># logs</a>
+              <a href="/tags/traces/" rel="tag"># traces</a>
+              <a href="/tags/metrics/" rel="tag"># metrics</a>
+          </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Pytest/Pytest-Extension/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Carter Lin">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Pytest/Pytest-Extension/" class="post-title-link" itemprop="url">Pytest Extension</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-08-25 21:06:00 / Modified: 21:14:49" itemprop="dateCreated datePublished" datetime="2024-08-25T21:06:00+08:00">2024-08-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Pytest/" itemprop="url" rel="index"><span itemprop="name">Pytest</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Pytest extension for Python tests for help on testing</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Pytest/Pytest-Extension/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Pytest/Pytest-Fixture/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Carter Lin">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Pytest/Pytest-Fixture/" class="post-title-link" itemprop="url">Pytest Fixture</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-08-24 21:50:30" itemprop="dateCreated datePublished" datetime="2024-08-24T21:50:30+08:00">2024-08-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-25 20:55:01" itemprop="dateModified" datetime="2024-08-25T20:55:01+08:00">2024-08-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Pytest/" itemprop="url" rel="index"><span itemprop="name">Pytest</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>In this article we will talk more about the pytest fixture</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Pytest/Pytest-Fixture/">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Pytest/Pytest-Extension/" rel="prev" title="Pytest Extension">
+                  <i class="fa fa-angle-left"></i> Pytest Extension
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Pytest/Python-Testing/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Carter Lin">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Pytest/Python-Testing/" class="post-title-link" itemprop="url">Python Testing</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-08-24 21:36:50" itemprop="dateCreated datePublished" datetime="2024-08-24T21:36:50+08:00">2024-08-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-25 14:36:06" itemprop="dateModified" datetime="2024-08-25T14:36:06+08:00">2024-08-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Pytest/" itemprop="url" rel="index"><span itemprop="name">Pytest</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>This is the article for those interested in Python testing but don't have experience beginners.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Pytest/Python-Testing/">
-                Read more &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/hexo-tutorial/Frist-By-Hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Carter Lin">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Carter's Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/hexo-tutorial/Frist-By-Hexo/" class="post-title-link" itemprop="url">Frist  By Hexo</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-08-24 21:35:51" itemprop="dateCreated datePublished" datetime="2024-08-24T21:35:51+08:00">2024-08-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-08-25 14:07:47" itemprop="dateModified" datetime="2024-08-25T14:07:47+08:00">2024-08-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/hexo-tutorial/" itemprop="url" rel="index"><span itemprop="name">hexo tutorial</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Hello, world!</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -658,6 +333,8 @@
 
 
 
+
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 

@@ -160,4 +160,57 @@
         <tag>unit tests</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Opentelemetry</title>
+    <url>/Opentelemetry/Opentelemetry/</url>
+    <content><![CDATA[<h1 id="OpenTelemetry-Logs-Traces-and-Metrics"><a href="#OpenTelemetry-Logs-Traces-and-Metrics" class="headerlink" title="OpenTelemetry: Logs, Traces, and Metrics"></a>OpenTelemetry: Logs, Traces, and Metrics</h1><p>OpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of data: logs, traces, and metrics. Below is a detailed explanation of each, along with a Python example.</p>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>Logging captures detailed information about events and messages occurring within your application.</p>
+<h3 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
+<li><strong>Logger</strong>: Used to create and manage log records.</li>
+<li><strong>Log Record</strong>: Represents a single log entry.</li>
+</ul>
+<h3 id="Python-Example"><a href="#Python-Example" class="headerlink" title="Python Example"></a>Python Example</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opentelemetry-api opentelemetry-sdk</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> opentelemetry <span class="keyword">import</span> logs</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.logs <span class="keyword">import</span> LoggingProvider, ConsoleLogExporter</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.logs.export <span class="keyword">import</span> SimpleLogReader</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up logging</span></span><br><span class="line">logs.set_logger_provider(LoggingProvider())</span><br><span class="line">logger = logs.get_logger(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of creating and using logs</span></span><br><span class="line">logger.info(<span class="string">&quot;This is an informational message&quot;</span>)</span><br><span class="line">logger.error(<span class="string">&quot;This is an error message&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tracing"><a href="#Tracing" class="headerlink" title="Tracing"></a>Tracing</h2><p>Tracing helps track the flow of requests through your services, showing how different parts of your system interact.</p>
+<h3 id="Key-Concepts-1"><a href="#Key-Concepts-1" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
+<li><strong>Tracer</strong>: Creates and manages spans.</li>
+<li><strong>Span</strong>: Represents a single operation within a trace.</li>
+<li><strong>Context</strong>: Maintains the state of the current trace</li>
+</ul>
+<h3 id="Python-Example-1"><a href="#Python-Example-1" class="headerlink" title="Python Example"></a>Python Example</h3><p>Install Required Packages:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opentelemetry-api opentelemetry-sdk</span><br></pre></td></tr></table></figure>
+
+<p>Basic Tracing Setup:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> opentelemetry <span class="keyword">import</span> trace</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.trace <span class="keyword">import</span> TracerProvider, SpanProcessor</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.trace.export <span class="keyword">import</span> SimpleSpanProcessor, ConsoleSpanExporter</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up the Tracer Provider</span></span><br><span class="line">trace.set_tracer_provider(TracerProvider())</span><br><span class="line">tracer = trace.get_tracer(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up a span processor and exporter</span></span><br><span class="line">span_processor = SimpleSpanProcessor(ConsoleSpanExporter())</span><br><span class="line">trace.get_tracer_provider().add_span_processor(span_processor)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of creating and using spans</span></span><br><span class="line"><span class="keyword">with</span> tracer.start_as_current_span(<span class="string">&quot;example-span&quot;</span>) <span class="keyword">as</span> span:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tracing something within the span&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Nested span example</span></span><br><span class="line">    <span class="keyword">with</span> tracer.start_as_current_span(<span class="string">&quot;nested-span&quot;</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Tracing something within a nested span&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h2><p>Metrics provide numerical data about the performance and state of your application over time.</p>
+<h3 id="Key-Concepts-2"><a href="#Key-Concepts-2" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
+<li><strong>Meter</strong>: Used to create and manage metrics.</li>
+<li><strong>Counter</strong>: Increases over time, e.g., counting requests.</li>
+<li><strong>Histogram</strong>: Records the distribution of values, such as response times.</li>
+<li><strong>Gauge</strong>: Records a value that can go up and down, such as active connections.</li>
+</ul>
+<h3 id="Python-Example-2"><a href="#Python-Example-2" class="headerlink" title="Python Example"></a>Python Example</h3><p>Install Required Packages:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opentelemetry-api opentelemetry-sdk</span><br></pre></td></tr></table></figure>
+<p>Basic Metrics Setup:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> opentelemetry <span class="keyword">import</span> metrics</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.metrics <span class="keyword">import</span> MeterProvider, ConsoleMetricsExporter</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.metrics.export <span class="keyword">import</span> SimpleMetricReader</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up the Meter Provider</span></span><br><span class="line">meter_provider = MeterProvider()</span><br><span class="line">metrics.set_meter_provider(meter_provider)</span><br><span class="line">meter = metrics.get_meter(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up a metric reader and exporter</span></span><br><span class="line">metric_reader = SimpleMetricReader(ConsoleMetricsExporter())</span><br><span class="line">meter_provider.start_pipeline(meter, metric_reader)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of creating and using metrics</span></span><br><span class="line">counter = meter.create_counter(<span class="string">&quot;example_counter&quot;</span>, description=<span class="string">&quot;Counts things&quot;</span>)</span><br><span class="line">counter.add(<span class="number">1</span>)  <span class="comment"># Increment counter by 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># For histogram example:</span></span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.metrics <span class="keyword">import</span> Histogram</span><br><span class="line">histogram = meter.create_histogram(<span class="string">&quot;example_histogram&quot;</span>, description=<span class="string">&quot;Records values&quot;</span>)</span><br><span class="line">histogram.record(<span class="number">5</span>)  <span class="comment"># Record a value of 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gauge example:</span></span><br><span class="line">gauge = meter.create_gauge(<span class="string">&quot;example_gauge&quot;</span>, description=<span class="string">&quot;Records current value&quot;</span>)</span><br><span class="line">gauge.<span class="built_in">set</span>(<span class="number">42</span>)  <span class="comment"># Set gauge to 42</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li><strong>Logs</strong> capture detailed events or messages about what’s happening in your application, often used for debugging.</li>
+<li><strong>Traces</strong> track the flow of requests through various services, showing the path and timing of each request.</li>
+<li><strong>Metrics</strong> collect numerical data over time, like request counts or error rates, to monitor performance and health.</li>
+</ul>
+<p>By using OpenTelemetry with Python, you can effectively gather and analyze these three types of observability data, leading to better insights into your application’s performance and behavior.</p>
+]]></content>
+      <categories>
+        <category>Opentelemetry</category>
+      </categories>
+      <tags>
+        <tag>opentelemetry</tag>
+        <tag>logs</tag>
+        <tag>traces</tag>
+        <tag>metrics</tag>
+      </tags>
+  </entry>
 </search>
