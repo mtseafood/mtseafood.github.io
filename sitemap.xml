@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/Opentelemetry/Opentelemetry/</loc>
+    <loc>http://example.com/about/</loc>
     
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/about/</loc>
+    <loc>http://example.com/Opentelemetry/Opentelemetry/</loc>
     
     <lastmod>2024-08-26</lastmod>
     
@@ -85,7 +85,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -93,70 +93,70 @@
   
   <url>
     <loc>http://example.com/tags/python/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/pytest/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/plugin/</loc>
-    <lastmod>2024-08-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/fixtures/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/opentelemetry/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/logs/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/traces/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/metrics/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/fixtures/</loc>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/tests/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/unit-tests/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -165,21 +165,21 @@
   
   <url>
     <loc>http://example.com/categories/hexo-tutorial/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Pytest/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Opentelemetry/</loc>
-    <lastmod>2024-08-26</lastmod>
+    <lastmod>2024-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
