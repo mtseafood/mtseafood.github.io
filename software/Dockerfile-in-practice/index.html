@@ -20,30 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Pytest extension for Python tests for help on testing">
+    <meta name="description" content="Dockerfile Practical Tips">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pytest Extension">
-<meta property="og:url" content="http://example.com/Pytest/Pytest-Extension/">
+<meta property="og:title" content="Dockerfile in practice">
+<meta property="og:url" content="http://example.com/software/Dockerfile-in-practice/">
 <meta property="og:site_name" content="Carter&#39;s Notes">
-<meta property="og:description" content="Pytest extension for Python tests for help on testing">
+<meta property="og:description" content="Dockerfile Practical Tips">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-08-25T13:06:00.000Z">
-<meta property="article:modified_time" content="2024-08-25T13:14:49.966Z">
+<meta property="article:published_time" content="2024-09-17T06:19:05.000Z">
+<meta property="article:modified_time" content="2024-09-17T06:29:15.529Z">
 <meta property="article:author" content="Carter Lin">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="pytest">
-<meta property="article:tag" content="plugin">
+<meta property="article:tag" content="docker, container, software">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/Pytest/Pytest-Extension/">
+<link rel="canonical" href="http://example.com/software/Dockerfile-in-practice/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/Pytest/Pytest-Extension/","path":"Pytest/Pytest-Extension/","title":"Pytest Extension"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/software/Dockerfile-in-practice/","path":"software/Dockerfile-in-practice/","title":"Dockerfile in practice"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Pytest Extension | Carter's Notes</title>
+<title>Dockerfile in practice | Carter's Notes</title>
   
 
 
@@ -142,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pytest-related-Packages"><span class="nav-number">1.</span> <span class="nav-text">pytest-related Packages</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#pytest-xdist"><span class="nav-number">1.1.</span> <span class="nav-text">pytest-xdist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytest-cov"><span class="nav-number">1.2.</span> <span class="nav-text">pytest-cov</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytest-html"><span class="nav-number">1.3.</span> <span class="nav-text">pytest-html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pytest-sugar"><span class="nav-number">1.4.</span> <span class="nav-text">pytest-sugar</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Official-Base-Images"><span class="nav-number">1.</span> <span class="nav-text">Use Official Base Images</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-Tag-Table-Comparison"><span class="nav-number">1.1.</span> <span class="nav-text">Image Tag Table Comparison</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minimize-Layers"><span class="nav-number">2.</span> <span class="nav-text">Minimize Layers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leverage-Caching"><span class="nav-number">3.</span> <span class="nav-text">Leverage Caching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-dockerignore"><span class="nav-number">4.</span> <span class="nav-text">Use .dockerignore</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Specify-a-Non-Root-User"><span class="nav-number">5.</span> <span class="nav-text">Specify a Non-Root User</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keep-Images-Small"><span class="nav-number">6.</span> <span class="nav-text">Keep Images Small</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Multi-Stage-Builds"><span class="nav-number">7.</span> <span class="nav-text">Use Multi-Stage Builds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-Environment-Variables"><span class="nav-number">8.</span> <span class="nav-text">Set Environment Variables</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -201,7 +199,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Pytest/Pytest-Extension/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/software/Dockerfile-in-practice/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -214,12 +212,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Pytest Extension | Carter's Notes">
-      <meta itemprop="description" content="Pytest extension for Python tests for help on testing">
+      <meta itemprop="name" content="Dockerfile in practice | Carter's Notes">
+      <meta itemprop="description" content="Dockerfile Practical Tips">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Pytest Extension
+          Dockerfile in practice
         </h1>
 
         <div class="post-meta-container">
@@ -231,7 +229,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-08-25 21:06:00 / Modified: 21:14:49" itemprop="dateCreated datePublished" datetime="2024-08-25T21:06:00+08:00">2024-08-25</time>
+      <time title="Created: 2024-09-17 14:19:05 / Modified: 14:29:15" itemprop="dateCreated datePublished" datetime="2024-09-17T14:19:05+08:00">2024-09-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -239,7 +237,7 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Pytest/" itemprop="url" rel="index"><span itemprop="name">Pytest</span></a>
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a>
         </span>
     </span>
 
@@ -253,29 +251,110 @@
     </span>
 </div>
 
-            <div class="post-description">Pytest extension for Python tests for help on testing</div>
+            <div class="post-description">Dockerfile Practical Tips</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="pytest-related-Packages"><a href="#pytest-related-Packages" class="headerlink" title="pytest-related Packages"></a>pytest-related Packages</h1><h2 id="pytest-xdist"><a href="#pytest-xdist" class="headerlink" title="pytest-xdist"></a>pytest-xdist</h2><p><code>pytest-xdist</code> is a plugin for pytest that allows you to run your tests in parallel across multiple CPUs or even on remote machines. This can significantly speed up your test execution time, especially for large test suites.</p>
-<ul>
-<li><strong>Documentation</strong>: <a target="_blank" rel="noopener" href="https://pytest-xdist.readthedocs.io/en/latest/">pytest-xdist</a></li>
-</ul>
-<h2 id="pytest-cov"><a href="#pytest-cov" class="headerlink" title="pytest-cov"></a>pytest-cov</h2><p><code>pytest-cov</code> is a plugin that provides coverage reporting for your tests. It integrates with the coverage.py tool to measure code coverage and generate reports, making it easier to identify untested parts of your codebase.</p>
-<ul>
-<li><strong>Documentation</strong>: <a target="_blank" rel="noopener" href="https://pytest-cov.readthedocs.io/en/latest/">pytest-cov</a></li>
-</ul>
-<h2 id="pytest-html"><a href="#pytest-html" class="headerlink" title="pytest-html"></a>pytest-html</h2><p><code>pytest-html</code> is a plugin that generates HTML reports for your test runs. This allows you to easily visualize the results of your tests, including detailed information about passed and failed tests, along with logs and screenshots.</p>
-<ul>
-<li><strong>Documentation</strong>: <a target="_blank" rel="noopener" href="https://pytest-html.readthedocs.io/en/latest/">pytest-html</a></li>
-</ul>
-<h2 id="pytest-sugar"><a href="#pytest-sugar" class="headerlink" title="pytest-sugar"></a>pytest-sugar</h2><p><code>pytest-sugar</code> is a plugin that enhances the default output of pytest by providing a more visually appealing and informative test run report. It adds progress bars, colored output, and additional statistics to improve the overall testing experience.</p>
-<ul>
-<li><strong>Documentation</strong>: <a target="_blank" rel="noopener" href="https://github.com/Frozenball/pytest-sugar">pytest-sugar</a></li>
-</ul>
+    <div class="post-body" itemprop="articleBody"><h2 id="Use-Official-Base-Images"><a href="#Use-Official-Base-Images" class="headerlink" title="Use Official Base Images"></a>Use Official Base Images</h2><p>Start with official images from Docker Hub when possible. They are optimized and maintained by the community.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM python:3.9-slim</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image-Tag-Table-Comparison"><a href="#Image-Tag-Table-Comparison" class="headerlink" title="Image Tag Table Comparison"></a>Image Tag Table Comparison</h3><table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+<th>Base OS</th>
+<th>Size</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>python:3.9</td>
+<td>Official Python 3.9 image.</td>
+<td>Debian-based</td>
+<td>Larger</td>
+<td>General-purpose Python applications.</td>
+</tr>
+<tr>
+<td>python:3.9-slim</td>
+<td>Slimmed down version of Python 3.9.</td>
+<td>Debian-based</td>
+<td>Smaller</td>
+<td>Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td>python:3.9-alpine</td>
+<td>Python 3.9 on Alpine Linux.</td>
+<td>Alpine Linux</td>
+<td>Very small</td>
+<td>Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td>python:3.10</td>
+<td>Official Python 3.10 image.</td>
+<td>Debian-based</td>
+<td>Larger</td>
+<td>General-purpose Python applications.</td>
+</tr>
+<tr>
+<td>python:3.10-slim</td>
+<td>Slimmed down version of Python 3.10.</td>
+<td>Debian-based</td>
+<td>Smaller</td>
+<td>Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td>python:3.10-alpine</td>
+<td>Python 3.10 on Alpine Linux.</td>
+<td>Alpine Linux</td>
+<td>Very small</td>
+<td>Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td>python:latest</td>
+<td>Latest stable version of Python (currently 3.11+).</td>
+<td>Debian-based</td>
+<td>Larger</td>
+<td>Always use the newest features and updates.</td>
+</tr>
+<tr>
+<td>python:<version>-buster</td>
+<td>Python image based on Debian Buster (e.g., python:3.9-buster).</td>
+<td>Debian Buster</td>
+<td>Medium</td>
+<td>Applications needing Debian Buster compatibility.</td>
+</tr>
+<tr>
+<td>python:<version>-bullseye</td>
+<td>Python image based on Debian Bullseye (e.g., python:3.9-bullseye).</td>
+<td>Debian Bullseye</td>
+<td>Medium</td>
+<td>Applications needing Debian Bullseye compatibility.</td>
+</tr>
+</tbody></table>
+<h2 id="Minimize-Layers"><a href="#Minimize-Layers" class="headerlink" title="Minimize Layers"></a>Minimize Layers</h2><p>Combine commands to reduce the number of layers in your image. Use &amp;&amp; to chain commands together.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get update &amp;&amp; apt-get install -y \</span><br><span class="line">    curl \</span><br><span class="line">    git \</span><br><span class="line">    &amp;&amp; rm -rf /var/lib/apt/lists/*</span><br></pre></td></tr></table></figure>
+
+<h2 id="Leverage-Caching"><a href="#Leverage-Caching" class="headerlink" title="Leverage Caching"></a>Leverage Caching</h2><p>Order your commands to take advantage of Docker’s caching mechanism. Place less frequently changing commands (like installing dependencies) at the top.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">COPY requirements.txt .</span><br><span class="line">RUN pip install -r requirements.txt</span><br><span class="line">COPY . .</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-dockerignore"><a href="#Use-dockerignore" class="headerlink" title="Use .dockerignore"></a>Use .dockerignore</h2><p>Create a .dockerignore file to exclude unnecessary files from being copied into the image, which can help reduce the image size.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.git</span><br><span class="line">node_modules</span><br><span class="line">*.log</span><br></pre></td></tr></table></figure>
+
+<h2 id="Specify-a-Non-Root-User"><a href="#Specify-a-Non-Root-User" class="headerlink" title="Specify a Non-Root User"></a>Specify a Non-Root User</h2><p>For security reasons, run your application as a non-root user.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN useradd -m myuser</span><br><span class="line">USER myuser</span><br></pre></td></tr></table></figure>
+
+<h2 id="Keep-Images-Small"><a href="#Keep-Images-Small" class="headerlink" title="Keep Images Small"></a>Keep Images Small</h2><p>Use lighter base images (like alpine) and remove unnecessary files after installation to keep your image size small.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN apk add --no-cache curl</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Multi-Stage-Builds"><a href="#Use-Multi-Stage-Builds" class="headerlink" title="Use Multi-Stage Builds"></a>Use Multi-Stage Builds</h2><p>For complex applications, use multi-stage builds to separate the build environment from the runtime environment.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FROM golang:1.17 AS builder</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY . .</span><br><span class="line">RUN go build -o myapp</span><br><span class="line"></span><br><span class="line">FROM alpine:latest</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY --from=builder /app/myapp .</span><br><span class="line">CMD [&quot;./myapp&quot;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set-Environment-Variables"><a href="#Set-Environment-Variables" class="headerlink" title="Set Environment Variables"></a>Set Environment Variables</h2><p>Use ENV to define environment variables that can be reused throughout the Dockerfile.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ENV APP_HOME /app</span><br><span class="line">WORKDIR $APP_HOME</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -285,23 +364,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/python/" rel="tag"># python</a>
-              <a href="/tags/pytest/" rel="tag"># pytest</a>
-              <a href="/tags/plugin/" rel="tag"># plugin</a>
+              <a href="/tags/docker-container-software/" rel="tag"># docker, container, software</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/Pytest/Pytest-Fixture/" rel="prev" title="Pytest Fixture">
-                  <i class="fa fa-angle-left"></i> Pytest Fixture
+                <a href="/software-docker-docker-compose/Docker-Compose/" rel="prev" title="Docker Compose">
+                  <i class="fa fa-angle-left"></i> Docker Compose
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/Opentelemetry/Opentelemetry/" rel="next" title="Opentelemetry">
-                  Opentelemetry <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

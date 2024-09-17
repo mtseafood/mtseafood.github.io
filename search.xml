@@ -40,13 +40,168 @@
       </tags>
   </entry>
   <entry>
-    <title>Frist  By Hexo</title>
-    <url>/hexo-tutorial/Frist-By-Hexo/</url>
-    <content><![CDATA[<p>Hello, world!</p>
+    <title>Docker</title>
+    <url>/software/Docker/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In today’s fast-paced development environment, the need for efficient software deployment and scalability is paramount. Docker has emerged as a groundbreaking technology that allows developers to easily package, deploy, and manage applications in isolated environments known as containers.</p>
+<h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Docker is an open-source platform that automates the deployment of applications inside lightweight, portable containers. Containers are a standardized unit of software that encapsulate an application and all its dependencies, ensuring that it runs seamlessly across different computing environments.</p>
+<h2 id="Why-Use-Docker"><a href="#Why-Use-Docker" class="headerlink" title="Why Use Docker?"></a>Why Use Docker?</h2><ol>
+<li><p><strong>Portability:</strong> Docker containers can run on any machine that has Docker installed, making it easy to move applications between development, testing, and production environments.</p>
+</li>
+<li><p><strong>Isolation:</strong> Each Docker container runs in its own isolated environment, allowing developers to avoid conflicts between different software libraries and dependencies.</p>
+</li>
+<li><p><strong>Scalability:</strong> Docker enables easy scaling of applications by allowing multiple instances of a container to run simultaneously to handle increased loads.</p>
+</li>
+<li><p><strong>Efficiency:</strong> Containers share the host OS kernel, making them more lightweight than traditional virtual machines, which require a guest OS.</p>
+</li>
+</ol>
+<h2 id="Key-Concepts-in-Docker"><a href="#Key-Concepts-in-Docker" class="headerlink" title="Key Concepts in Docker"></a>Key Concepts in Docker</h2><ol>
+<li><p><strong>Images vs. Containers:</strong></p>
+<ul>
+<li><strong>Image:</strong> A Docker image is a read-only template used to create containers. Images contain the application code, libraries, and environment variables.</li>
+<li><strong>Container:</strong> A container is a running instance of an image. It is a lightweight, standalone, executable package that includes everything needed to run a piece of software.</li>
+</ul>
+</li>
+<li><p><strong>Dockerfile:</strong><br>A Dockerfile is a script containing a series of instructions to create a Docker image. It defines everything required to set up an application, including the base image, dependencies, and configuration settings.</p>
+</li>
+<li><p><strong>Docker Hub:</strong><br>Docker Hub is a cloud-based repository where developers can store and share Docker images. It provides a platform to find pre-built images and collaborate with other developers.</p>
+</li>
+</ol>
+<h2 id="Getting-Started-with-Docker"><a href="#Getting-Started-with-Docker" class="headerlink" title="Getting Started with Docker"></a>Getting Started with Docker</h2><ol>
+<li><p><strong>Installation:</strong><br>To start using Docker, you need to install Docker Desktop, which is available for Windows, macOS, and Linux. Follow the official installation instructions <a href="https://docs.docker.com/get-docker/">here</a>.</p>
+</li>
+<li><p><strong>Creating Your First Container:</strong><br>Use the following command to pull an image and run a simple container:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Building Your Own Image:</strong><br>Create a simple <code>Dockerfile</code> for a FastAPI application:</p>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.9</span>-slim</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> requirements.txt .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install --no-cache-dir -r requirements.txt</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;uvicorn&quot;</span>, <span class="string">&quot;app:app&quot;</span>, <span class="string">&quot;--host&quot;</span>, <span class="string">&quot;0.0.0.0&quot;</span>, <span class="string">&quot;--port&quot;</span>, <span class="string">&quot;8000&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<p>In this example, make sure your requirements.txt includes fastapi and uvicorn. Here’s a simple example of what that file might look like:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastapi</span><br><span class="line">uvicorn</span><br></pre></td></tr></table></figure>
+
+<p>An example app.py file could look like this:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line">app = FastAPI()</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">read_root</span>():</span><br><span class="line"> <span class="keyword">return</span> &#123;<span class="string">&quot;Hello&quot;</span>: <span class="string">&quot;World&quot;</span>&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>To build an image from this Dockerfile, run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -t myfastapiapp .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Running Your Application:<br>After building your image, you can run your application in a container:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8000:8000 myfastapiapp</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Docker is revolutionizing the way software is developed and deployed by promoting portability, scalability, and efficiency. With its growing ecosystem and robust community support, Docker is becoming a standard tool for developers worldwide. Embracing Docker can significantly enhance your development workflow and lead to more reliable and consistent application deployments.</p>
+<h2 id="Further-Reading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading</h2><p>Official Docker Documentation: <a href="https://docs.docker.com/">Docker Docs</a><br>Explore Docker Compose for multi-container applications: <a href="https://docs.docker.com/compose/">Docker Compose</a></p>
 ]]></content>
       <categories>
-        <category>hexo tutorial</category>
+        <category>software</category>
       </categories>
+      <tags>
+        <tag>docker, container, software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dockerfile in practice</title>
+    <url>/software/Dockerfile-in-practice/</url>
+    <content><![CDATA[<h2 id="Use-Official-Base-Images"><a href="#Use-Official-Base-Images" class="headerlink" title="Use Official Base Images"></a>Use Official Base Images</h2><p>Start with official images from Docker Hub when possible. They are optimized and maintained by the community.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM python:3.9-slim</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image-Tag-Table-Comparison"><a href="#Image-Tag-Table-Comparison" class="headerlink" title="Image Tag Table Comparison"></a>Image Tag Table Comparison</h3><table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+<th>Base OS</th>
+<th>Size</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>python:3.9</td>
+<td>Official Python 3.9 image.</td>
+<td>Debian-based</td>
+<td>Larger</td>
+<td>General-purpose Python applications.</td>
+</tr>
+<tr>
+<td>python:3.9-slim</td>
+<td>Slimmed down version of Python 3.9.</td>
+<td>Debian-based</td>
+<td>Smaller</td>
+<td>Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td>python:3.9-alpine</td>
+<td>Python 3.9 on Alpine Linux.</td>
+<td>Alpine Linux</td>
+<td>Very small</td>
+<td>Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td>python:3.10</td>
+<td>Official Python 3.10 image.</td>
+<td>Debian-based</td>
+<td>Larger</td>
+<td>General-purpose Python applications.</td>
+</tr>
+<tr>
+<td>python:3.10-slim</td>
+<td>Slimmed down version of Python 3.10.</td>
+<td>Debian-based</td>
+<td>Smaller</td>
+<td>Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td>python:3.10-alpine</td>
+<td>Python 3.10 on Alpine Linux.</td>
+<td>Alpine Linux</td>
+<td>Very small</td>
+<td>Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td>python:latest</td>
+<td>Latest stable version of Python (currently 3.11+).</td>
+<td>Debian-based</td>
+<td>Larger</td>
+<td>Always use the newest features and updates.</td>
+</tr>
+<tr>
+<td>python:<version>-buster</td>
+<td>Python image based on Debian Buster (e.g., python:3.9-buster).</td>
+<td>Debian Buster</td>
+<td>Medium</td>
+<td>Applications needing Debian Buster compatibility.</td>
+</tr>
+<tr>
+<td>python:<version>-bullseye</td>
+<td>Python image based on Debian Bullseye (e.g., python:3.9-bullseye).</td>
+<td>Debian Bullseye</td>
+<td>Medium</td>
+<td>Applications needing Debian Bullseye compatibility.</td>
+</tr>
+</tbody></table>
+<h2 id="Minimize-Layers"><a href="#Minimize-Layers" class="headerlink" title="Minimize Layers"></a>Minimize Layers</h2><p>Combine commands to reduce the number of layers in your image. Use &amp;&amp; to chain commands together.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RUN apt-get update &amp;&amp; apt-get install -y \</span><br><span class="line">    curl \</span><br><span class="line">    git \</span><br><span class="line">    &amp;&amp; rm -rf /var/lib/apt/lists/*</span><br></pre></td></tr></table></figure>
+
+<h2 id="Leverage-Caching"><a href="#Leverage-Caching" class="headerlink" title="Leverage Caching"></a>Leverage Caching</h2><p>Order your commands to take advantage of Docker’s caching mechanism. Place less frequently changing commands (like installing dependencies) at the top.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY requirements.txt .</span><br><span class="line">RUN pip install -r requirements.txt</span><br><span class="line">COPY . .</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-dockerignore"><a href="#Use-dockerignore" class="headerlink" title="Use .dockerignore"></a>Use .dockerignore</h2><p>Create a .dockerignore file to exclude unnecessary files from being copied into the image, which can help reduce the image size.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.git</span><br><span class="line">node_modules</span><br><span class="line">*.log</span><br></pre></td></tr></table></figure>
+
+<h2 id="Specify-a-Non-Root-User"><a href="#Specify-a-Non-Root-User" class="headerlink" title="Specify a Non-Root User"></a>Specify a Non-Root User</h2><p>For security reasons, run your application as a non-root user.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RUN useradd -m myuser</span><br><span class="line">USER myuser</span><br></pre></td></tr></table></figure>
+
+<h2 id="Keep-Images-Small"><a href="#Keep-Images-Small" class="headerlink" title="Keep Images Small"></a>Keep Images Small</h2><p>Use lighter base images (like alpine) and remove unnecessary files after installation to keep your image size small.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RUN apk add --no-cache curl</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Multi-Stage-Builds"><a href="#Use-Multi-Stage-Builds" class="headerlink" title="Use Multi-Stage Builds"></a>Use Multi-Stage Builds</h2><p>For complex applications, use multi-stage builds to separate the build environment from the runtime environment.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM golang:1.17 AS builder</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY . .</span><br><span class="line">RUN go build -o myapp</span><br><span class="line"></span><br><span class="line">FROM alpine:latest</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY --from=builder /app/myapp .</span><br><span class="line">CMD [&quot;./myapp&quot;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set-Environment-Variables"><a href="#Set-Environment-Variables" class="headerlink" title="Set Environment Variables"></a>Set Environment Variables</h2><p>Use ENV to define environment variables that can be reused throughout the Dockerfile.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ENV APP_HOME /app</span><br><span class="line">WORKDIR $APP_HOME</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>docker, container, software</tag>
+      </tags>
   </entry>
   <entry>
     <title>Opentelemetry</title>
@@ -100,6 +255,15 @@
         <tag>traces</tag>
         <tag>metrics</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Frist  By Hexo</title>
+    <url>/hexo-tutorial/Frist-By-Hexo/</url>
+    <content><![CDATA[<p>Hello, world!</p>
+]]></content>
+      <categories>
+        <category>hexo tutorial</category>
+      </categories>
   </entry>
   <entry>
     <title>Pytest Extension</title>
@@ -250,62 +414,6 @@
         <tag>pytest</tag>
         <tag>tests</tag>
         <tag>unit tests</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker</title>
-    <url>/software/Docker/</url>
-    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In today’s fast-paced development environment, the need for efficient software deployment and scalability is paramount. Docker has emerged as a groundbreaking technology that allows developers to easily package, deploy, and manage applications in isolated environments known as containers.</p>
-<h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Docker is an open-source platform that automates the deployment of applications inside lightweight, portable containers. Containers are a standardized unit of software that encapsulate an application and all its dependencies, ensuring that it runs seamlessly across different computing environments.</p>
-<h2 id="Why-Use-Docker"><a href="#Why-Use-Docker" class="headerlink" title="Why Use Docker?"></a>Why Use Docker?</h2><ol>
-<li><p><strong>Portability:</strong> Docker containers can run on any machine that has Docker installed, making it easy to move applications between development, testing, and production environments.</p>
-</li>
-<li><p><strong>Isolation:</strong> Each Docker container runs in its own isolated environment, allowing developers to avoid conflicts between different software libraries and dependencies.</p>
-</li>
-<li><p><strong>Scalability:</strong> Docker enables easy scaling of applications by allowing multiple instances of a container to run simultaneously to handle increased loads.</p>
-</li>
-<li><p><strong>Efficiency:</strong> Containers share the host OS kernel, making them more lightweight than traditional virtual machines, which require a guest OS.</p>
-</li>
-</ol>
-<h2 id="Key-Concepts-in-Docker"><a href="#Key-Concepts-in-Docker" class="headerlink" title="Key Concepts in Docker"></a>Key Concepts in Docker</h2><ol>
-<li><p><strong>Images vs. Containers:</strong></p>
-<ul>
-<li><strong>Image:</strong> A Docker image is a read-only template used to create containers. Images contain the application code, libraries, and environment variables.</li>
-<li><strong>Container:</strong> A container is a running instance of an image. It is a lightweight, standalone, executable package that includes everything needed to run a piece of software.</li>
-</ul>
-</li>
-<li><p><strong>Dockerfile:</strong><br>A Dockerfile is a script containing a series of instructions to create a Docker image. It defines everything required to set up an application, including the base image, dependencies, and configuration settings.</p>
-</li>
-<li><p><strong>Docker Hub:</strong><br>Docker Hub is a cloud-based repository where developers can store and share Docker images. It provides a platform to find pre-built images and collaborate with other developers.</p>
-</li>
-</ol>
-<h2 id="Getting-Started-with-Docker"><a href="#Getting-Started-with-Docker" class="headerlink" title="Getting Started with Docker"></a>Getting Started with Docker</h2><ol>
-<li><p><strong>Installation:</strong><br>To start using Docker, you need to install Docker Desktop, which is available for Windows, macOS, and Linux. Follow the official installation instructions <a href="https://docs.docker.com/get-docker/">here</a>.</p>
-</li>
-<li><p><strong>Creating Your First Container:</strong><br>Use the following command to pull an image and run a simple container:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Building Your Own Image:</strong><br>Create a simple <code>Dockerfile</code> for a FastAPI application:</p>
-<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.9</span>-slim</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> requirements.txt .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install --no-cache-dir -r requirements.txt</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;uvicorn&quot;</span>, <span class="string">&quot;app:app&quot;</span>, <span class="string">&quot;--host&quot;</span>, <span class="string">&quot;0.0.0.0&quot;</span>, <span class="string">&quot;--port&quot;</span>, <span class="string">&quot;8000&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-<p>In this example, make sure your requirements.txt includes fastapi and uvicorn. Here’s a simple example of what that file might look like:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastapi</span><br><span class="line">uvicorn</span><br></pre></td></tr></table></figure>
-
-<p>An example app.py file could look like this:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line">app = FastAPI()</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">read_root</span>():</span><br><span class="line"> <span class="keyword">return</span> &#123;<span class="string">&quot;Hello&quot;</span>: <span class="string">&quot;World&quot;</span>&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>To build an image from this Dockerfile, run:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -t myfastapiapp .</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Running Your Application:<br>After building your image, you can run your application in a container:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8000:8000 myfastapiapp</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Docker is revolutionizing the way software is developed and deployed by promoting portability, scalability, and efficiency. With its growing ecosystem and robust community support, Docker is becoming a standard tool for developers worldwide. Embracing Docker can significantly enhance your development workflow and lead to more reliable and consistent application deployments.</p>
-<h2 id="Further-Reading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading</h2><p>Official Docker Documentation: <a href="https://docs.docker.com/">Docker Docs</a><br>Explore Docker Compose for multi-container applications: <a href="https://docs.docker.com/compose/">Docker Compose</a></p>
-]]></content>
-      <categories>
-        <category>software</category>
-      </categories>
-      <tags>
-        <tag>docker, container, software</tag>
       </tags>
   </entry>
 </search>
