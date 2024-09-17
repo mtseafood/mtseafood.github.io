@@ -28,7 +28,7 @@
 <meta property="og:description" content="Dockerfile Practical Tips">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-17T06:19:05.000Z">
-<meta property="article:modified_time" content="2024-09-17T06:29:15.529Z">
+<meta property="article:modified_time" content="2024-09-17T06:30:58.310Z">
 <meta property="article:author" content="Carter Lin">
 <meta property="article:tag" content="docker, container, software">
 <meta name="twitter:card" content="summary">
@@ -229,7 +229,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2024-09-17 14:19:05 / Modified: 14:29:15" itemprop="dateCreated datePublished" datetime="2024-09-17T14:19:05+08:00">2024-09-17</time>
+      <time title="Created: 2024-09-17 14:19:05 / Modified: 14:30:58" itemprop="dateCreated datePublished" datetime="2024-09-17T14:19:05+08:00">2024-09-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -264,75 +264,75 @@
 <h3 id="Image-Tag-Table-Comparison"><a href="#Image-Tag-Table-Comparison" class="headerlink" title="Image Tag Table Comparison"></a>Image Tag Table Comparison</h3><table>
 <thead>
 <tr>
-<th>Tag</th>
-<th>Description</th>
-<th>Base OS</th>
-<th>Size</th>
-<th>Use Case</th>
+<th align="center">Tag</th>
+<th align="center">Description</th>
+<th align="center">Base OS</th>
+<th align="center">Size</th>
+<th align="center">Use Case</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>python:3.9</td>
-<td>Official Python 3.9 image.</td>
-<td>Debian-based</td>
-<td>Larger</td>
-<td>General-purpose Python applications.</td>
+<td align="center">python:3.9</td>
+<td align="center">Official Python 3.9 image.</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">General-purpose Python applications.</td>
 </tr>
 <tr>
-<td>python:3.9-slim</td>
-<td>Slimmed down version of Python 3.9.</td>
-<td>Debian-based</td>
-<td>Smaller</td>
-<td>Lightweight applications, reduced image size.</td>
+<td align="center">python:3.9-slim</td>
+<td align="center">Slimmed down version of Python 3.9.</td>
+<td align="center">Debian-based</td>
+<td align="center">Smaller</td>
+<td align="center">Lightweight applications, reduced image size.</td>
 </tr>
 <tr>
-<td>python:3.9-alpine</td>
-<td>Python 3.9 on Alpine Linux.</td>
-<td>Alpine Linux</td>
-<td>Very small</td>
-<td>Minimalist applications, highly efficient.</td>
+<td align="center">python:3.9-alpine</td>
+<td align="center">Python 3.9 on Alpine Linux.</td>
+<td align="center">Alpine Linux</td>
+<td align="center">Very small</td>
+<td align="center">Minimalist applications, highly efficient.</td>
 </tr>
 <tr>
-<td>python:3.10</td>
-<td>Official Python 3.10 image.</td>
-<td>Debian-based</td>
-<td>Larger</td>
-<td>General-purpose Python applications.</td>
+<td align="center">python:3.10</td>
+<td align="center">Official Python 3.10 image.</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">General-purpose Python applications.</td>
 </tr>
 <tr>
-<td>python:3.10-slim</td>
-<td>Slimmed down version of Python 3.10.</td>
-<td>Debian-based</td>
-<td>Smaller</td>
-<td>Lightweight applications, reduced image size.</td>
+<td align="center">python:3.10-slim</td>
+<td align="center">Slimmed down version of Python 3.10.</td>
+<td align="center">Debian-based</td>
+<td align="center">Smaller</td>
+<td align="center">Lightweight applications, reduced image size.</td>
 </tr>
 <tr>
-<td>python:3.10-alpine</td>
-<td>Python 3.10 on Alpine Linux.</td>
-<td>Alpine Linux</td>
-<td>Very small</td>
-<td>Minimalist applications, highly efficient.</td>
+<td align="center">python:3.10-alpine</td>
+<td align="center">Python 3.10 on Alpine Linux.</td>
+<td align="center">Alpine Linux</td>
+<td align="center">Very small</td>
+<td align="center">Minimalist applications, highly efficient.</td>
 </tr>
 <tr>
-<td>python:latest</td>
-<td>Latest stable version of Python (currently 3.11+).</td>
-<td>Debian-based</td>
-<td>Larger</td>
-<td>Always use the newest features and updates.</td>
+<td align="center">python:latest</td>
+<td align="center">Latest stable version of Python (currently 3.11+).</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">Always use the newest features and updates.</td>
 </tr>
 <tr>
-<td>python:<version>-buster</td>
-<td>Python image based on Debian Buster (e.g., python:3.9-buster).</td>
-<td>Debian Buster</td>
-<td>Medium</td>
-<td>Applications needing Debian Buster compatibility.</td>
+<td align="center">python:<version>-buster</td>
+<td align="center">Python image based on Debian Buster (e.g., python:3.9-buster).</td>
+<td align="center">Debian Buster</td>
+<td align="center">Medium</td>
+<td align="center">Applications needing Debian Buster compatibility.</td>
 </tr>
 <tr>
-<td>python:<version>-bullseye</td>
-<td>Python image based on Debian Bullseye (e.g., python:3.9-bullseye).</td>
-<td>Debian Bullseye</td>
-<td>Medium</td>
-<td>Applications needing Debian Bullseye compatibility.</td>
+<td align="center">python:<version>-bullseye</td>
+<td align="center">Python image based on Debian Bullseye (e.g., python:3.9-bullseye).</td>
+<td align="center">Debian Bullseye</td>
+<td align="center">Medium</td>
+<td align="center">Applications needing Debian Bullseye compatibility.</td>
 </tr>
 </tbody></table>
 <h2 id="Minimize-Layers"><a href="#Minimize-Layers" class="headerlink" title="Minimize Layers"></a>Minimize Layers</h2><p>Combine commands to reduce the number of layers in your image. Use &amp;&amp; to chain commands together.</p>
