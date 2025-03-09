@@ -419,24 +419,23 @@
   <entry>
     <title>Project Management</title>
     <url>/uncategorized/Project-Management/</url>
-    <content><![CDATA[<h2 id="Pareto-principle-80-20-principle"><a href="#Pareto-principle-80-20-principle" class="headerlink" title="Pareto principle (80&#x2F;20 principle)"></a>Pareto principle (80&#x2F;20 principle)</h2><p>Productivity<br>You can use the 80&#x2F;20 rule to prioritize the tasks that must be completed first during the day.<br>The concept is that by completing the 20% of tasks on your entire task list that should be prioritized, you can achieve 80% of your daily work results. Therefore, to accomplish the most impactful work, you should identify which tasks have the greatest impact on the team and focus your efforts on those tasks throughout the day.</p>
-<p>生產力<br>您可以使用 80&#x2F;20 法則來優先執行一天當中必須先完成的任務。 </p>
-<p>其概念是完成整個任務清單中 20% 最應優先執行的任務，就能為您當天的工作成果帶來 80% 的影響。有鑑於此，若要完成最具影響力的工作，就應辨別哪些任務對團隊有最大的影響，並在一天當中專心投入這些任務。</p>
-<p>Descsion making</p>
-<p>Suppose you work at an e-commerce company. You have reviewed 100 recent customer service complaints and found that most of the complaints were due to customers receiving damaged products. After calculating the amount of refunds your team has issued for damaged products, you discovered that 80% of the refunds given were for damaged products. Your company wants to prevent the operations related to providing refunds for damaged products, so you view this issue as a priority solution.</p>
-<p>做決策<br>假設您在一家電子商務公司工作。您看了近期有關客戶服務的 100 份投訴，並且發現大部分的投訴原因是客戶收到破損產品。您的團隊針對破損產品而提供退款的金額做了計算後，發現給出去的退款中有 80% 是用在破損產品的退款。您的公司想要防止為破損產品提供退款的相關作業，因此您將這個問題視為優先執行的解決方案。 </p>
+    <content><![CDATA[<h2 id="Pareto-principle-80-20-principle"><a href="#Pareto-principle-80-20-principle" class="headerlink" title="Pareto principle (80&#x2F;20 principle)"></a>Pareto principle (80&#x2F;20 principle)</h2><h3 id="Productivity"><a href="#Productivity" class="headerlink" title="Productivity"></a>Productivity</h3><p>You can use the 80&#x2F;20 rule to prioritize the tasks that must be completed first during the day.<br>The concept is that by completing the 20% of tasks on your entire task list that should be prioritized, you can achieve 80% of your daily work results. Therefore, to accomplish the most impactful work, you should identify which tasks have the greatest impact on the team and focus your efforts on those tasks throughout the day.</p>
+<h3 id="Descsion-making"><a href="#Descsion-making" class="headerlink" title="Descsion making"></a>Descsion making</h3><p>Suppose you work at an e-commerce company. You have reviewed 100 recent customer service complaints and found that most of the complaints were due to customers receiving damaged products. After calculating the amount of refunds your team has issued for damaged products, you discovered that 80% of the refunds given were for damaged products. Your company wants to prevent the operations related to providing refunds for damaged products, so you view this issue as a priority solution.</p>
 <h2 id="Sufficiency-of-Information-for-Requirements"><a href="#Sufficiency-of-Information-for-Requirements" class="headerlink" title="Sufficiency of Information for Requirements"></a>Sufficiency of Information for Requirements</h2><p>What problems are currently being encountered?<br>What possible solutions could there be?<br>What benefits will come from solving this problem, or what difficulties will it resolve?</p>
+<h2 id="Requirement-Analysis"><a href="#Requirement-Analysis" class="headerlink" title="Requirement Analysis"></a>Requirement Analysis</h2><ul>
+<li>Clarify the purpose of requirements: Understand the business objectives and user needs behind the requirements, such as whether to improve conversion rates, enhance user experience, or increase user numbers.</li>
+<li>Define business value: Quantify the impact of requirements on business value, such as revenue increase, cost reduction, and heightened user engagement. Business value helps stakeholders understand the importance of the requirements. </li>
+<li>Technical feasibility assessment: Collaborate with the technical team to analyze the technical challenges of the requirements, including development complexity, system compatibility, and feasibility. This can help all parties evaluate implementation costs and risks.</li>
+</ul>
+<h2 id="80-20法則"><a href="#80-20法則" class="headerlink" title="80&#x2F;20法則"></a>80&#x2F;20法則</h2><p>生產力<br>您可以使用 80&#x2F;20 法則來優先執行一天當中必須先完成的任務。 </p>
+<p>其概念是完成整個任務清單中 20% 最應優先執行的任務，就能為您當天的工作成果帶來 80% 的影響。有鑑於此，若要完成最具影響力的工作，就應辨別哪些任務對團隊有最大的影響，並在一天當中專心投入這些任務。</p>
+<p>做決策<br>假設您在一家電子商務公司工作。您看了近期有關客戶服務的 100 份投訴，並且發現大部分的投訴原因是客戶收到破損產品。您的團隊針對破損產品而提供退款的金額做了計算後，發現給出去的退款中有 80% 是用在破損產品的退款。您的公司想要防止為破損產品提供退款的相關作業，因此您將這個問題視為優先執行的解決方案。 </p>
 <h2 id="需求的資訊充足性"><a href="#需求的資訊充足性" class="headerlink" title="需求的資訊充足性"></a>需求的資訊充足性</h2><ul>
 <li>目前遇到什麼問題？</li>
 <li>可能可以有什麼解法？</li>
 <li>這個問題解決後，會帶來什麼好處，或者解決哪些困難？</li>
 </ul>
 <p>最典型的 user story 公式就是：作為 {某種使用者} (Who)，我想要 {做到某件事}(What)，這樣我就可以 {達到什麼目標}(Why)。</p>
-<h2 id="Requirement-Analysis"><a href="#Requirement-Analysis" class="headerlink" title="Requirement Analysis"></a>Requirement Analysis</h2><ul>
-<li>Clarify the purpose of requirements: Understand the business objectives and user needs behind the requirements, such as whether to improve conversion rates, enhance user experience, or increase user numbers.</li>
-<li>Define business value: Quantify the impact of requirements on business value, such as revenue increase, cost reduction, and heightened user engagement. Business value helps stakeholders understand the importance of the requirements. </li>
-<li>Technical feasibility assessment: Collaborate with the technical team to analyze the technical challenges of the requirements, including development complexity, system compatibility, and feasibility. This can help all parties evaluate implementation costs and risks.</li>
-</ul>
 <h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><ul>
 <li>明確需求目的：了解需求背後的業務目標和使用者需求，例如是否提高轉換率、提升使用體驗或增加用戶數。</li>
 <li>定義商業價值：將需求對商業價值進行量化，例如收入增加、成本降低、使用者黏性提升等。商業價值有助於利益相關者理解需求的重要性。</li>
