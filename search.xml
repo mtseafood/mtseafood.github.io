@@ -204,15 +204,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Frist  By Hexo</title>
-    <url>/hexo-tutorial/Frist-By-Hexo/</url>
-    <content><![CDATA[<p>Hello, world!</p>
-]]></content>
-      <categories>
-        <category>hexo tutorial</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Opentelemetry</title>
     <url>/Opentelemetry/Opentelemetry/</url>
     <content><![CDATA[<h1 id="OpenTelemetry-Logs-Traces-and-Metrics"><a href="#OpenTelemetry-Logs-Traces-and-Metrics" class="headerlink" title="OpenTelemetry: Logs, Traces, and Metrics"></a>OpenTelemetry: Logs, Traces, and Metrics</h1><p>OpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of data: logs, traces, and metrics. Below is a detailed explanation of each, along with a Python example.</p>
@@ -263,6 +254,104 @@
         <tag>logs</tag>
         <tag>traces</tag>
         <tag>metrics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Frist  By Hexo</title>
+    <url>/hexo-tutorial/Frist-By-Hexo/</url>
+    <content><![CDATA[<p>Hello, world!</p>
+]]></content>
+      <categories>
+        <category>hexo tutorial</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Project Management - Stackholder</title>
+    <url>/uncategorized/Project-Management-Stackholder/</url>
+    <content><![CDATA[<h1 id="Roles-in-Project-Management"><a href="#Roles-in-Project-Management" class="headerlink" title="Roles in Project Management"></a>Roles in Project Management</h1><p>In the framework of software management, there are four roles in running a project:</p>
+<h2 id="1-Project-Sponsor"><a href="#1-Project-Sponsor" class="headerlink" title="1. Project Sponsor"></a>1. Project Sponsor</h2><p><strong>Quantity:</strong> One<br>The person who funds the project, usually a senior manager, holds political responsibility for the project’s success or failure.</p>
+<h2 id="2-Project-Manager-PM"><a href="#2-Project-Manager-PM" class="headerlink" title="2. Project Manager (PM)"></a>2. Project Manager (PM)</h2><p><strong>Quantity:</strong> One<br>The person who actually runs and monitors the project, holding direct responsibility for its success or failure.</p>
+<h2 id="3-Project-Team"><a href="#3-Project-Team" class="headerlink" title="3. Project Team"></a>3. Project Team</h2><p><strong>Quantity:</strong> Several to many<br>Those who participate in the project.</p>
+<h2 id="4-Stakeholders"><a href="#4-Stakeholders" class="headerlink" title="4. Stakeholders"></a>4. Stakeholders</h2><p><strong>Quantity:</strong> A truckload to countless<br>Everyone who has a say in the project.</p>
+<h1 id="4-Steps-to-Create-a-Project-Stakeholder-Analysis-Diagram"><a href="#4-Steps-to-Create-a-Project-Stakeholder-Analysis-Diagram" class="headerlink" title="4 Steps to Create a Project Stakeholder Analysis Diagram"></a>4 Steps to Create a Project Stakeholder Analysis Diagram</h1><p>Identifying and managing your project stakeholders is an excellent way to lay the foundation for a successful project. When key project stakeholders trust you, they are more likely to provide support, which can be crucial throughout the project lifecycle. Conversely, without supportive stakeholders, you may find yourself having to set stakeholder expectations halfway through the project, which can lead to changes and unnecessary project risks. To avoid this, you must take the following four steps to create an effective project stakeholder analysis diagram.</p>
+<h2 id="Step-1-Identify-Project-Stakeholders"><a href="#Step-1-Identify-Project-Stakeholders" class="headerlink" title="Step 1: Identify Project Stakeholders"></a>Step 1: Identify Project Stakeholders</h2><p>Before managing stakeholder expectations, you first need to know who the stakeholders are. Be sure to include both internal and external stakeholders. To figure out who your project stakeholders are, ask yourself:</p>
+<ul>
+<li>Who cares about this project?</li>
+<li>Who will be affected by this project?</li>
+<li>Who can influence this project?</li>
+<li>Who can approve&#x2F;reject this project?</li>
+</ul>
+<h2 id="Step-2-Determine-the-Influence-and-Interest-Levels-of-Project-Stakeholders"><a href="#Step-2-Determine-the-Influence-and-Interest-Levels-of-Project-Stakeholders" class="headerlink" title="Step 2: Determine the Influence and Interest Levels of Project Stakeholders"></a>Step 2: Determine the Influence and Interest Levels of Project Stakeholders</h2><p>If high-level project stakeholders participate, they can truly elevate your project to a higher level. The best way to confirm high-level involvement is to establish a clear stakeholder analysis diagram that outlines the influence and interest levels of each project stakeholder. This matrix structure (sometimes referred to as the power-interest matrix) is the best way to visually represent the four main groups of project stakeholders.</p>
+<p>The four main groups of project stakeholders are:</p>
+<ol>
+<li><strong>High Influence and High Interest</strong>: Manage Closely</li>
+<li><strong>High Influence and Low Interest</strong>: Keep Satisfied</li>
+<li><strong>Low Influence and High Interest</strong>: Keep Informed</li>
+<li><strong>Low Influence and Low Interest</strong>: Monitor</li>
+</ol>
+<img src="/uncategorized/Project-Management-Stackholder/image.png" class="">
+
+
+<h2 id="Step-3-Understand-Stakeholder-Needs"><a href="#Step-3-Understand-Stakeholder-Needs" class="headerlink" title="Step 3: Understand Stakeholder Needs"></a>Step 3: Understand Stakeholder Needs</h2><p>The reality is that some stakeholders may disagree with specific elements of the project. As a project manager, you are responsible for understanding their needs and perspectives, and finding solutions that will not negatively impact the success of the project. You are not obligated to do everything that stakeholders ask of you, but you are obligated to listen to and understand their needs.</p>
+<p>Sometimes, certain individuals may seem like “difficult stakeholders,” but in fact, their priorities may simply differ from yours. Your work might even interrupt parts of their workflow. If you try to see things from their perspective, you will have a better chance of finding solutions and turning the situation into a win-win outcome.</p>
+<p>When in doubt, put yourself in others’ shoes. Ask yourself:</p>
+<ul>
+<li>What do they need?</li>
+<li>What level of communication do they want?</li>
+<li>What is the most effective communication strategy?</li>
+<li>Do these stakeholders have anyone they influence, or are they influenced by others?</li>
+<li>How do you accurately identify the interests of stakeholders?</li>
+</ul>
+<h2 id="Step-4-Include-Project-Stakeholders-in-the-Recipient-List"><a href="#Step-4-Include-Project-Stakeholders-in-the-Recipient-List" class="headerlink" title="Step 4: Include Project Stakeholders in the Recipient List"></a>Step 4: Include Project Stakeholders in the Recipient List</h2><p>Once you have identified your project stakeholders and considered their needs, it is essential to invite them to participate in project planning workshops and kickoff meetings (if applicable). Key project stakeholders should also sign off on the project charter, project plan, project objectives, and project scope.</p>
+<h2 id="Common-Myths"><a href="#Common-Myths" class="headerlink" title="Common Myths"></a>Common Myths</h2><ol>
+<li><p><strong>Every stakeholder needs to be satisfied.</strong><br>Stakeholder management involves categorization, allowing us to focus our efforts where they matter most and avoid the dilemma of trying to please everyone.</p>
+</li>
+<li><p><strong>Stakeholders only need to be dealt with.</strong><br>Valuable insights and details that can significantly impact the success or failure of a project can be gained from stakeholders. Properly utilizing these insights can lead to smoother project execution.</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Project management, Stackholder</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management - Time Management</title>
+    <url>/uncategorized/Project-Management-Time-Management/</url>
+    <content><![CDATA[<h1 id="Waterfull"><a href="#Waterfull" class="headerlink" title="Waterfull"></a>Waterfull</h1><h2 id="Milestone"><a href="#Milestone" class="headerlink" title="Milestone"></a>Milestone</h2><p>Some activities are far more important and representative than others, so we treat them as milestones to see how far we are from our plans. Examples include graduating from college, getting married, having children, starting a business, and retiring.</p>
+<h2 id="Rolling-Wave-Planning"><a href="#Rolling-Wave-Planning" class="headerlink" title="Rolling Wave Planning"></a>Rolling Wave Planning</h2><p>This is probably the term in PMBOK that is closest to Agile. It uses a method of Progressive Elaboration, where we plan in detail and specifically for the near term, while keeping the long-term plans rough and abstract. For instance, at the age of twelve, one might think about how to study in junior high school to best benefit their future and establish specific plans, whereas thinking about the details of marriage or college right now may simply be speculative and a waste of time.</p>
+<h2 id="Schedule-Compression"><a href="#Schedule-Compression" class="headerlink" title="Schedule Compression"></a>Schedule Compression</h2><p>Under the premise of not changing the project scope, the goal is to shorten the overall duration of the project. There are two common methods:</p>
+<ol>
+<li><p><strong>Crashing</strong>: This means spending money to buy time, such as hiring an excellent tutor to make courses easier to understand. Or, in the case of marriage, offering a bride price and a house to reduce the time spent finding a girlfriend. It’s important to note that while the project timeline may shorten, the goal may not be achieved. For instance, if the original intention was to find someone who loves you for marriage, it might change to seeking someone who loves money instead. However, if the only goal is to get married to anyone, then it doesn’t matter.</p>
+</li>
+<li><p><strong>Fast Tracking</strong>: This involves changing originally sequential activities to be carried out in parallel. A common example is a part-time job while studying, or studying at university while having children. Typically, the cost of Fast Tracking is an increased risk, as proceeding before the right time can</p>
+</li>
+</ol>
+<h2 id="Common-way-to-estimate-the-time"><a href="#Common-way-to-estimate-the-time" class="headerlink" title="Common way to estimate the time"></a>Common way to estimate the time</h2><ol>
+<li><strong>Expert Judgment</strong>: Consult familiar team members or external experts for evaluations.</li>
+<li><strong>Analogous Estimation</strong>: Estimate time based on similar past projects.</li>
+<li><strong>Parametric Estimation</strong>: Use historical data parameters for calculations, suitable for simple tasks. For example, cabinet installation time is estimated using dimensions, but higher carpentry complexity increases variability.</li>
+<li><strong>Three-Point Estimation</strong>: Divide estimates into “most likely,” “pessimistic,” and “optimistic” values, useful for projects with risks and uncertainties.</li>
+<li><strong>Bottom-Up Estimation</strong>: Start estimating from the lowest Work Breakdown Structure (WBS) level and accumulate upwards.</li>
+</ol>
+<h2 id="Scrum"><a href="#Scrum" class="headerlink" title="Scrum"></a>Scrum</h2><h3 id="Story-Points-Represent-“Time-Scale”-of-Tasks"><a href="#Story-Points-Represent-“Time-Scale”-of-Tasks" class="headerlink" title="Story Points Represent: “Time Scale” of Tasks"></a>Story Points Represent: “Time Scale” of Tasks</h3><pre><code>&quot;People actually do not have much ability to estimate the time required for big tasks.&quot;
+</code></pre>
+<p>Each Sprint may contain dozens of Stories, and each Story has its own Story Point used to measure the “time scale” of a single task. The assessment of the time scale includes factors such as “complexity,” “number of people involved,” “familiarity,” “difficulty,” and “basic operation time.” Generally, the more complex the task, the more people involved, and the less familiar it is… the more time it will take.</p>
+<p>Since it is a measure of “time scale,” it, of course, “excludes” the value brought by completing the task, the money that needs to be spent, and so on.</p>
+<h3 id="Simple-Process-for-Story-Point-Estimation"><a href="#Simple-Process-for-Story-Point-Estimation" class="headerlink" title="Simple Process for Story Point Estimation"></a>Simple Process for Story Point Estimation</h3><p>Estimating story points is similar to a simple show of hands. Here’s our company’s process:</p>
+<ol>
+<li><p><strong>Complete Story Overview:</strong><br>Begin the planning meeting by discussing all aspects of the stories (goals, methods, criteria, etc.).</p>
+</li>
+<li><p><strong>Establish Criteria for Evaluation:</strong><br>Set foundational standards using a couple of stories to create a consensus. For example, if you think a story is a 5-point and I think it’s a 13-point, we aim to adjust them to a common team score, like a 5.</p>
+</li>
+<li><p><strong>Individual Scoring:</strong><br>Members score the stories independently on a form using Fibonacci numbers (1-21). This is done silently, without discussion or questions. After everyone has submitted their scores, discussion can begin.</p>
+<p><em>(If there are issues, use “?” or “21” to highlight concerns, as asking questions afterward would be redundant.)</em></p>
+</li>
+<li><p><strong>Discuss Significant Discrepancies:</strong><br>Focus on stories with large differences in scores where consensus is not reached.</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Time management, Project Management</tag>
       </tags>
   </entry>
   <entry>
@@ -394,55 +483,6 @@
         <tag>python</tag>
         <tag>pytest</tag>
         <tag>fixtures</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Project Management - Stackholder</title>
-    <url>/uncategorized/Project-Management-Stackholder/</url>
-    <content><![CDATA[<h1 id="Roles-in-Project-Management"><a href="#Roles-in-Project-Management" class="headerlink" title="Roles in Project Management"></a>Roles in Project Management</h1><p>In the framework of software management, there are four roles in running a project:</p>
-<h2 id="1-Project-Sponsor"><a href="#1-Project-Sponsor" class="headerlink" title="1. Project Sponsor"></a>1. Project Sponsor</h2><p><strong>Quantity:</strong> One<br>The person who funds the project, usually a senior manager, holds political responsibility for the project’s success or failure.</p>
-<h2 id="2-Project-Manager-PM"><a href="#2-Project-Manager-PM" class="headerlink" title="2. Project Manager (PM)"></a>2. Project Manager (PM)</h2><p><strong>Quantity:</strong> One<br>The person who actually runs and monitors the project, holding direct responsibility for its success or failure.</p>
-<h2 id="3-Project-Team"><a href="#3-Project-Team" class="headerlink" title="3. Project Team"></a>3. Project Team</h2><p><strong>Quantity:</strong> Several to many<br>Those who participate in the project.</p>
-<h2 id="4-Stakeholders"><a href="#4-Stakeholders" class="headerlink" title="4. Stakeholders"></a>4. Stakeholders</h2><p><strong>Quantity:</strong> A truckload to countless<br>Everyone who has a say in the project.</p>
-<h1 id="4-Steps-to-Create-a-Project-Stakeholder-Analysis-Diagram"><a href="#4-Steps-to-Create-a-Project-Stakeholder-Analysis-Diagram" class="headerlink" title="4 Steps to Create a Project Stakeholder Analysis Diagram"></a>4 Steps to Create a Project Stakeholder Analysis Diagram</h1><p>Identifying and managing your project stakeholders is an excellent way to lay the foundation for a successful project. When key project stakeholders trust you, they are more likely to provide support, which can be crucial throughout the project lifecycle. Conversely, without supportive stakeholders, you may find yourself having to set stakeholder expectations halfway through the project, which can lead to changes and unnecessary project risks. To avoid this, you must take the following four steps to create an effective project stakeholder analysis diagram.</p>
-<h2 id="Step-1-Identify-Project-Stakeholders"><a href="#Step-1-Identify-Project-Stakeholders" class="headerlink" title="Step 1: Identify Project Stakeholders"></a>Step 1: Identify Project Stakeholders</h2><p>Before managing stakeholder expectations, you first need to know who the stakeholders are. Be sure to include both internal and external stakeholders. To figure out who your project stakeholders are, ask yourself:</p>
-<ul>
-<li>Who cares about this project?</li>
-<li>Who will be affected by this project?</li>
-<li>Who can influence this project?</li>
-<li>Who can approve&#x2F;reject this project?</li>
-</ul>
-<h2 id="Step-2-Determine-the-Influence-and-Interest-Levels-of-Project-Stakeholders"><a href="#Step-2-Determine-the-Influence-and-Interest-Levels-of-Project-Stakeholders" class="headerlink" title="Step 2: Determine the Influence and Interest Levels of Project Stakeholders"></a>Step 2: Determine the Influence and Interest Levels of Project Stakeholders</h2><p>If high-level project stakeholders participate, they can truly elevate your project to a higher level. The best way to confirm high-level involvement is to establish a clear stakeholder analysis diagram that outlines the influence and interest levels of each project stakeholder. This matrix structure (sometimes referred to as the power-interest matrix) is the best way to visually represent the four main groups of project stakeholders.</p>
-<p>The four main groups of project stakeholders are:</p>
-<ol>
-<li><strong>High Influence and High Interest</strong>: Manage Closely</li>
-<li><strong>High Influence and Low Interest</strong>: Keep Satisfied</li>
-<li><strong>Low Influence and High Interest</strong>: Keep Informed</li>
-<li><strong>Low Influence and Low Interest</strong>: Monitor</li>
-</ol>
-<img src="/uncategorized/Project-Management-Stackholder/image.png" class="">
-
-
-<h2 id="Step-3-Understand-Stakeholder-Needs"><a href="#Step-3-Understand-Stakeholder-Needs" class="headerlink" title="Step 3: Understand Stakeholder Needs"></a>Step 3: Understand Stakeholder Needs</h2><p>The reality is that some stakeholders may disagree with specific elements of the project. As a project manager, you are responsible for understanding their needs and perspectives, and finding solutions that will not negatively impact the success of the project. You are not obligated to do everything that stakeholders ask of you, but you are obligated to listen to and understand their needs.</p>
-<p>Sometimes, certain individuals may seem like “difficult stakeholders,” but in fact, their priorities may simply differ from yours. Your work might even interrupt parts of their workflow. If you try to see things from their perspective, you will have a better chance of finding solutions and turning the situation into a win-win outcome.</p>
-<p>When in doubt, put yourself in others’ shoes. Ask yourself:</p>
-<ul>
-<li>What do they need?</li>
-<li>What level of communication do they want?</li>
-<li>What is the most effective communication strategy?</li>
-<li>Do these stakeholders have anyone they influence, or are they influenced by others?</li>
-<li>How do you accurately identify the interests of stakeholders?</li>
-</ul>
-<h2 id="Step-4-Include-Project-Stakeholders-in-the-Recipient-List"><a href="#Step-4-Include-Project-Stakeholders-in-the-Recipient-List" class="headerlink" title="Step 4: Include Project Stakeholders in the Recipient List"></a>Step 4: Include Project Stakeholders in the Recipient List</h2><p>Once you have identified your project stakeholders and considered their needs, it is essential to invite them to participate in project planning workshops and kickoff meetings (if applicable). Key project stakeholders should also sign off on the project charter, project plan, project objectives, and project scope.</p>
-<h2 id="Common-Myths"><a href="#Common-Myths" class="headerlink" title="Common Myths"></a>Common Myths</h2><ol>
-<li><p><strong>Every stakeholder needs to be satisfied.</strong><br>Stakeholder management involves categorization, allowing us to focus our efforts where they matter most and avoid the dilemma of trying to please everyone.</p>
-</li>
-<li><p><strong>Stakeholders only need to be dealt with.</strong><br>Valuable insights and details that can significantly impact the success or failure of a project can be gained from stakeholders. Properly utilizing these insights can lead to smoother project execution.</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Project management, Stackholder</tag>
       </tags>
   </entry>
   <entry>
