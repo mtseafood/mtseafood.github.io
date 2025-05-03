@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/uncategorized/Project-Management-Headless-Chicken/</loc>
+    <loc>http://example.com/Project-Management/Project-Management-Integration/</loc>
+    
+    <lastmod>2025-05-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/Project-Management/Project-Management-Headless-Chicken/</loc>
     
     <lastmod>2025-05-03</lastmod>
     
@@ -279,6 +288,13 @@
   
   <url>
     <loc>http://example.com/tags/project-management-process-group/</loc>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Story/</loc>
     <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

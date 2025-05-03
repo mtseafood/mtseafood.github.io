@@ -670,7 +670,7 @@
   </entry>
   <entry>
     <title>Project Management Headless Chicken</title>
-    <url>/uncategorized/Project-Management-Headless-Chicken/</url>
+    <url>/Project-Management/Project-Management-Headless-Chicken/</url>
     <content><![CDATA[<h2 id="Unclear-and-Uncertain-requirements"><a href="#Unclear-and-Uncertain-requirements" class="headerlink" title="Unclear and Uncertain requirements"></a>Unclear and Uncertain requirements</h2><p>“Unclear requirements” and “uncertain requirements” are two major categories that contribute significantly to the failure of software projects.</p>
 <h3 id="The-Phrase-“Chicken-Without-a-Head”-in-Project-Management"><a href="#The-Phrase-“Chicken-Without-a-Head”-in-Project-Management" class="headerlink" title="The Phrase “Chicken Without a Head” in Project Management"></a>The Phrase “Chicken Without a Head” in Project Management</h3><p>The phrase “chicken without a head” in project management refers to a situation where team members are busy but lack clear direction and planning, resulting in chaotic execution, much like a headless chicken running around aimlessly.</p>
 <h3 id="Background-of-the-Idiom"><a href="#Background-of-the-Idiom" class="headerlink" title="Background of the Idiom"></a>Background of the Idiom</h3><ul>
@@ -699,5 +699,72 @@
 </ol>
 <p>這個典故提醒專案經理和團隊成員，必須重視專案的規劃與管理，以避免陷入無序的狀態。</p>
 ]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+      <tags>
+        <tag>Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management - Integration</title>
+    <url>/Project-Management/Project-Management-Integration/</url>
+    <content><![CDATA[<h2 id="Integrate-Management-Processes"><a href="#Integrate-Management-Processes" class="headerlink" title="Integrate Management Processes"></a>Integrate Management Processes</h2><table>
+<thead>
+<tr>
+<th>No</th>
+<th>Process</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4.1</td>
+<td>Develop Project Charter</td>
+<td>Produce the project charter and obtain authorization, focusing on the project’s benefits.</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Develop Preliminary Project Scope Statement</td>
+<td>Produce the preliminary project scope statement, outlining the general scope.</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Develop Project Management Plan</td>
+<td>Create a project management plan to coordinate various plans.</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Direct and Manage Project Execution</td>
+<td>Execute the project management plan to achieve the objectives outlined in the project scope statement.</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>Monitor and Control Project Work</td>
+<td>Monitor all processes to achieve the performance goals in the project management plan.</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>Integrated Change Control</td>
+<td>Review all change requests, approve changes, and control changes.</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>Close Project</td>
+<td>Formally close the project.</td>
+</tr>
+</tbody></table>
+<h2 id="Common-Tools"><a href="#Common-Tools" class="headerlink" title="Common Tools"></a>Common Tools</h2><ol>
+<li><p><strong>Visualize Goals</strong><br>Sometimes we fall into the trap of doing things just for the sake of doing them, blindly following plans and forgetting what the goals are. Therefore, the goals should be placed in the most visible areas that many people pass by.</p>
+</li>
+<li><p><strong>Go and See</strong><br>Going to the site allows us to discover many things that are not documented.</p>
+</li>
+<li><p><strong>Time Management Matrix (Urgency VS Importance Matrix)</strong></p>
+</li>
+</ol>
+
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
   </entry>
 </search>
