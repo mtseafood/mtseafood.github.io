@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/uncategorized/Project-Management-Nine-Knowledge-Area/</loc>
+    <loc>http://example.com/Project-Management/Project-Management-Five-Process-Group/</loc>
     
     <lastmod>2025-05-03</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/Project-Management-Five-Process-Group/</loc>
+    <loc>http://example.com/Project-Management/Project-Management-Nine-Knowledge-Area/</loc>
     
     <lastmod>2025-05-03</lastmod>
     
@@ -20,27 +20,27 @@
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/Project-Management-Time-Management/</loc>
+    <loc>http://example.com/Project-Management/Project-Management-Stackholder/</loc>
     
-    <lastmod>2025-04-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/uncategorized/Project-Management-Stackholder/</loc>
-    
-    <lastmod>2025-04-05</lastmod>
+    <lastmod>2025-05-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/uncategorized/Project-Management/</loc>
+    <loc>http://example.com/Project-Management/Project-Management-Time-Management/</loc>
     
-    <lastmod>2025-03-09</lastmod>
+    <lastmod>2025-05-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/Project-Management/Project-Management/</loc>
+    
+    <lastmod>2025-05-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -307,6 +307,13 @@
   
   <url>
     <loc>http://example.com/categories/Pytest/</loc>
+    <lastmod>2025-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Project-Management/</loc>
     <lastmod>2025-05-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

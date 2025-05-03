@@ -267,7 +267,7 @@
   </entry>
   <entry>
     <title>Project Management - Five Process Group</title>
-    <url>/uncategorized/Project-Management-Five-Process-Group/</url>
+    <url>/Project-Management/Project-Management-Five-Process-Group/</url>
     <content><![CDATA[<h2 id="Five-Process-Group"><a href="#Five-Process-Group" class="headerlink" title="Five Process Group"></a>Five Process Group</h2><p>The five main processes are initiation, planning, execution, monitoring, and closure. The following events occur in the five main processes:</p>
 <table>
 <thead>
@@ -305,7 +305,7 @@
 </tbody></table>
 <h2 id="Project-Life-Cycle"><a href="#Project-Life-Cycle" class="headerlink" title="Project Life Cycle"></a>Project Life Cycle</h2><p>In the early stages of a project, stakeholders have a significant influence on the direction of the project, and the cost of changes is relatively low. However, as the project progresses to later stages, stakeholders’ ability to influence decreases, and the cost of changes increases. In simple terms, this is the concept of “the ship has sailed.” </p>
 <p>It’s important to note that a decrease in influence over the project’s direction does not mean a decrease in influence over the project’s success or failure. Discontented individuals can still easily cause the project to fail.</p>
-<img src="/uncategorized/Project-Management-Five-Process-Group/image.png" class="">
+<img src="/Project-Management/Project-Management-Five-Process-Group/image.png" class="">
 
 
 <h2 id="Common-Tools"><a href="#Common-Tools" class="headerlink" title="Common Tools"></a>Common Tools</h2><h3 id="Goal-Setting"><a href="#Goal-Setting" class="headerlink" title="Goal Setting"></a>Goal Setting</h3><p>Having goals provides direction; without goals or with too many goals, it is difficult to reach a consensus. Goals should be limited to three, prioritized accordingly, and must meet the SMART criteria. Many people say that leisure is a goal, but leisure can serve various purposes such as resting, experiencing different lifestyles, connecting with others, and meeting new people, etc. Different goals will generate different action plans.</p>
@@ -314,13 +314,16 @@
 <h3 id="Plans-cannot-change"><a href="#Plans-cannot-change" class="headerlink" title="Plans cannot change"></a>Plans cannot change</h3><p>If we could control the weather and prevent illness, then plans could certainly remain unchanged. Unfortunately, we are neither gods nor can we control the environment. When circumstances change, it is natural to adjust plans. Just like when the wind changes direction, if we do not adjust the sails, will we reach our destination?</p>
 <p>However, changing plans can be painful, especially after a lot of preparation and processes have been set. This is why agile project management is becoming popular in frequently changing environments. Agile methods emphasize short iterations to avoid spending excessive time on plans that are bound to change. Nevertheless, it is still necessary to set mid-to-long-term goals to serve as a direction.</p>
 ]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
       <tags>
         <tag>project management, process group</tag>
       </tags>
   </entry>
   <entry>
     <title>Project Management Nine Knowledge Area</title>
-    <url>/uncategorized/Project-Management-Nine-Knowledge-Area/</url>
+    <url>/Project-Management/Project-Management-Nine-Knowledge-Area/</url>
     <content><![CDATA[<p>The nine knowledge areas of project management are:</p>
 <table>
 <thead>
@@ -377,10 +380,13 @@
 </tr>
 </tbody></table>
 ]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
   </entry>
   <entry>
     <title>Project Management - Stackholder</title>
-    <url>/uncategorized/Project-Management-Stackholder/</url>
+    <url>/Project-Management/Project-Management-Stackholder/</url>
     <content><![CDATA[<h1 id="Roles-in-Project-Management"><a href="#Roles-in-Project-Management" class="headerlink" title="Roles in Project Management"></a>Roles in Project Management</h1><p>In the framework of software management, there are four roles in running a project:</p>
 <h2 id="1-Project-Sponsor"><a href="#1-Project-Sponsor" class="headerlink" title="1. Project Sponsor"></a>1. Project Sponsor</h2><p><strong>Quantity:</strong> One<br>The person who funds the project, usually a senior manager, holds political responsibility for the project’s success or failure.</p>
 <h2 id="2-Project-Manager-PM"><a href="#2-Project-Manager-PM" class="headerlink" title="2. Project Manager (PM)"></a>2. Project Manager (PM)</h2><p><strong>Quantity:</strong> One<br>The person who actually runs and monitors the project, holding direct responsibility for its success or failure.</p>
@@ -402,7 +408,7 @@
 <li><strong>Low Influence and High Interest</strong>: Keep Informed</li>
 <li><strong>Low Influence and Low Interest</strong>: Monitor</li>
 </ol>
-<img src="/uncategorized/Project-Management-Stackholder/image.png" class="">
+<img src="/Project-Management/Project-Management-Stackholder/image.png" class="">
 
 
 <h2 id="Step-3-Understand-Stakeholder-Needs"><a href="#Step-3-Understand-Stakeholder-Needs" class="headerlink" title="Step 3: Understand Stakeholder Needs"></a>Step 3: Understand Stakeholder Needs</h2><p>The reality is that some stakeholders may disagree with specific elements of the project. As a project manager, you are responsible for understanding their needs and perspectives, and finding solutions that will not negatively impact the success of the project. You are not obligated to do everything that stakeholders ask of you, but you are obligated to listen to and understand their needs.</p>
@@ -423,13 +429,16 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
       <tags>
         <tag>Project management, Stackholder</tag>
       </tags>
   </entry>
   <entry>
     <title>Project Management - Time Management</title>
-    <url>/uncategorized/Project-Management-Time-Management/</url>
+    <url>/Project-Management/Project-Management-Time-Management/</url>
     <content><![CDATA[<h1 id="Waterfull"><a href="#Waterfull" class="headerlink" title="Waterfull"></a>Waterfull</h1><h2 id="Milestone"><a href="#Milestone" class="headerlink" title="Milestone"></a>Milestone</h2><p>Some activities are far more important and representative than others, so we treat them as milestones to see how far we are from our plans. Examples include graduating from college, getting married, having children, starting a business, and retiring.</p>
 <h2 id="Rolling-Wave-Planning"><a href="#Rolling-Wave-Planning" class="headerlink" title="Rolling Wave Planning"></a>Rolling Wave Planning</h2><p>This is probably the term in PMBOK that is closest to Agile. It uses a method of Progressive Elaboration, where we plan in detail and specifically for the near term, while keeping the long-term plans rough and abstract. For instance, at the age of twelve, one might think about how to study in junior high school to best benefit their future and establish specific plans, whereas thinking about the details of marriage or college right now may simply be speculative and a waste of time.</p>
 <h2 id="Schedule-Compression"><a href="#Schedule-Compression" class="headerlink" title="Schedule Compression"></a>Schedule Compression</h2><p>Under the premise of not changing the project scope, the goal is to shorten the overall duration of the project. There are two common methods:</p>
@@ -463,6 +472,9 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
       <tags>
         <tag>Time management, Project Management</tag>
       </tags>
@@ -498,7 +510,7 @@
   </entry>
   <entry>
     <title>Project Management</title>
-    <url>/uncategorized/Project-Management/</url>
+    <url>/Project-Management/Project-Management/</url>
     <content><![CDATA[<h2 id="Pareto-principle-80-20-principle"><a href="#Pareto-principle-80-20-principle" class="headerlink" title="Pareto principle (80&#x2F;20 principle)"></a>Pareto principle (80&#x2F;20 principle)</h2><h3 id="Productivity"><a href="#Productivity" class="headerlink" title="Productivity"></a>Productivity</h3><p>You can use the 80&#x2F;20 rule to prioritize the tasks that must be completed first during the day.<br>The concept is that by completing the 20% of tasks on your entire task list that should be prioritized, you can achieve 80% of your daily work results. Therefore, to accomplish the most impactful work, you should identify which tasks have the greatest impact on the team and focus your efforts on those tasks throughout the day.</p>
 <h3 id="Descsion-making"><a href="#Descsion-making" class="headerlink" title="Descsion making"></a>Descsion making</h3><p>Suppose you work at an e-commerce company. You have reviewed 100 recent customer service complaints and found that most of the complaints were due to customers receiving damaged products. After calculating the amount of refunds your team has issued for damaged products, you discovered that 80% of the refunds given were for damaged products. Your company wants to prevent the operations related to providing refunds for damaged products, so you view this issue as a priority solution.</p>
 <h2 id="Sufficiency-of-Information-for-Requirements"><a href="#Sufficiency-of-Information-for-Requirements" class="headerlink" title="Sufficiency of Information for Requirements"></a>Sufficiency of Information for Requirements</h2><p>What problems are currently being encountered?<br>What possible solutions could there be?<br>What benefits will come from solving this problem, or what difficulties will it resolve?</p>
@@ -527,6 +539,9 @@
 <li><a href="https://nabi.104.com.tw/posts/nabi_post_33be1aa5-ac63-4dd8-b1d9-6096ea27fc0f">https://nabi.104.com.tw/posts/nabi_post_33be1aa5-ac63-4dd8-b1d9-6096ea27fc0f</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
       <tags>
         <tag>project-management, PM</tag>
       </tags>
