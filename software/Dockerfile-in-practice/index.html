@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Dockerfile Practical Tips">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dockerfile in practice">
+<meta property="og:url" content="http://example.com/software/Dockerfile-in-practice/">
+<meta property="og:site_name" content="Carter&#39;s Notes">
+<meta property="og:description" content="Dockerfile Practical Tips">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-09-17T06:19:05.000Z">
+<meta property="article:modified_time" content="2024-09-17T06:30:58.310Z">
+<meta property="article:author" content="Carter Lin">
+<meta property="article:tag" content="docker, container, software">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/software/Dockerfile-in-practice/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/software/Dockerfile-in-practice/","path":"software/Dockerfile-in-practice/","title":"Dockerfile in practice"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Dockerfile in practice | Carter's Notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Carter's Notes</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-s fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Official-Base-Images"><span class="nav-number">1.</span> <span class="nav-text">Use Official Base Images</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Image-Tag-Table-Comparison"><span class="nav-number">1.1.</span> <span class="nav-text">Image Tag Table Comparison</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minimize-Layers"><span class="nav-number">2.</span> <span class="nav-text">Minimize Layers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leverage-Caching"><span class="nav-number">3.</span> <span class="nav-text">Leverage Caching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-dockerignore"><span class="nav-number">4.</span> <span class="nav-text">Use .dockerignore</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Specify-a-Non-Root-User"><span class="nav-number">5.</span> <span class="nav-text">Specify a Non-Root User</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keep-Images-Small"><span class="nav-number">6.</span> <span class="nav-text">Keep Images Small</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Multi-Stage-Builds"><span class="nav-number">7.</span> <span class="nav-text">Use Multi-Stage Builds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-Environment-Variables"><span class="nav-number">8.</span> <span class="nav-text">Set Environment Variables</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Carter Lin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:carterlin0403@gmail.com" title="E-Mail → mailto:carterlin0403@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/carter-lin-15330b12a/" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;carter-lin-15330b12a&#x2F;" rel="noopener me" target="_blank"><i class="fa fa-weibo fa-fw"></i>LinkedIn</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/software/Dockerfile-in-practice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Carter Lin">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Carter's Notes">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Dockerfile in practice | Carter's Notes">
+      <meta itemprop="description" content="Dockerfile Practical Tips">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Dockerfile in practice
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2024-09-17 14:19:05 / Modified: 14:30:58" itemprop="dateCreated datePublished" datetime="2024-09-17T14:19:05+08:00">2024-09-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/software/" itemprop="url" rel="index"><span itemprop="name">software</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">Dockerfile Practical Tips</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Use-Official-Base-Images"><a href="#Use-Official-Base-Images" class="headerlink" title="Use Official Base Images"></a>Use Official Base Images</h2><p>Start with official images from Docker Hub when possible. They are optimized and maintained by the community.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM python:3.9-slim</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image-Tag-Table-Comparison"><a href="#Image-Tag-Table-Comparison" class="headerlink" title="Image Tag Table Comparison"></a>Image Tag Table Comparison</h3><table>
+<thead>
+<tr>
+<th align="center">Tag</th>
+<th align="center">Description</th>
+<th align="center">Base OS</th>
+<th align="center">Size</th>
+<th align="center">Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">python:3.9</td>
+<td align="center">Official Python 3.9 image.</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">General-purpose Python applications.</td>
+</tr>
+<tr>
+<td align="center">python:3.9-slim</td>
+<td align="center">Slimmed down version of Python 3.9.</td>
+<td align="center">Debian-based</td>
+<td align="center">Smaller</td>
+<td align="center">Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td align="center">python:3.9-alpine</td>
+<td align="center">Python 3.9 on Alpine Linux.</td>
+<td align="center">Alpine Linux</td>
+<td align="center">Very small</td>
+<td align="center">Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td align="center">python:3.10</td>
+<td align="center">Official Python 3.10 image.</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">General-purpose Python applications.</td>
+</tr>
+<tr>
+<td align="center">python:3.10-slim</td>
+<td align="center">Slimmed down version of Python 3.10.</td>
+<td align="center">Debian-based</td>
+<td align="center">Smaller</td>
+<td align="center">Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td align="center">python:3.10-alpine</td>
+<td align="center">Python 3.10 on Alpine Linux.</td>
+<td align="center">Alpine Linux</td>
+<td align="center">Very small</td>
+<td align="center">Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td align="center">python:latest</td>
+<td align="center">Latest stable version of Python (currently 3.11+).</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">Always use the newest features and updates.</td>
+</tr>
+<tr>
+<td align="center">python:<version>-buster</td>
+<td align="center">Python image based on Debian Buster (e.g., python:3.9-buster).</td>
+<td align="center">Debian Buster</td>
+<td align="center">Medium</td>
+<td align="center">Applications needing Debian Buster compatibility.</td>
+</tr>
+<tr>
+<td align="center">python:<version>-bullseye</td>
+<td align="center">Python image based on Debian Bullseye (e.g., python:3.9-bullseye).</td>
+<td align="center">Debian Bullseye</td>
+<td align="center">Medium</td>
+<td align="center">Applications needing Debian Bullseye compatibility.</td>
+</tr>
+</tbody></table>
+<h2 id="Minimize-Layers"><a href="#Minimize-Layers" class="headerlink" title="Minimize Layers"></a>Minimize Layers</h2><p>Combine commands to reduce the number of layers in your image. Use &amp;&amp; to chain commands together.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RUN apt-get update &amp;&amp; apt-get install -y \</span><br><span class="line">    curl \</span><br><span class="line">    git \</span><br><span class="line">    &amp;&amp; rm -rf /var/lib/apt/lists/*</span><br></pre></td></tr></table></figure>
+
+<h2 id="Leverage-Caching"><a href="#Leverage-Caching" class="headerlink" title="Leverage Caching"></a>Leverage Caching</h2><p>Order your commands to take advantage of Docker’s caching mechanism. Place less frequently changing commands (like installing dependencies) at the top.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">COPY requirements.txt .</span><br><span class="line">RUN pip install -r requirements.txt</span><br><span class="line">COPY . .</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-dockerignore"><a href="#Use-dockerignore" class="headerlink" title="Use .dockerignore"></a>Use .dockerignore</h2><p>Create a .dockerignore file to exclude unnecessary files from being copied into the image, which can help reduce the image size.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.git</span><br><span class="line">node_modules</span><br><span class="line">*.log</span><br></pre></td></tr></table></figure>
+
+<h2 id="Specify-a-Non-Root-User"><a href="#Specify-a-Non-Root-User" class="headerlink" title="Specify a Non-Root User"></a>Specify a Non-Root User</h2><p>For security reasons, run your application as a non-root user.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN useradd -m myuser</span><br><span class="line">USER myuser</span><br></pre></td></tr></table></figure>
+
+<h2 id="Keep-Images-Small"><a href="#Keep-Images-Small" class="headerlink" title="Keep Images Small"></a>Keep Images Small</h2><p>Use lighter base images (like alpine) and remove unnecessary files after installation to keep your image size small.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN apk add --no-cache curl</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Multi-Stage-Builds"><a href="#Use-Multi-Stage-Builds" class="headerlink" title="Use Multi-Stage Builds"></a>Use Multi-Stage Builds</h2><p>For complex applications, use multi-stage builds to separate the build environment from the runtime environment.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FROM golang:1.17 AS builder</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY . .</span><br><span class="line">RUN go build -o myapp</span><br><span class="line"></span><br><span class="line">FROM alpine:latest</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY --from=builder /app/myapp .</span><br><span class="line">CMD [&quot;./myapp&quot;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set-Environment-Variables"><a href="#Set-Environment-Variables" class="headerlink" title="Set Environment Variables"></a>Set Environment Variables</h2><p>Use ENV to define environment variables that can be reused throughout the Dockerfile.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ENV APP_HOME /app</span><br><span class="line">WORKDIR $APP_HOME</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/docker-container-software/" rel="tag"># docker, container, software</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/software-docker-docker-compose/Docker-Compose/" rel="prev" title="Docker Compose">
+                  <i class="fa fa-angle-left"></i> Docker Compose
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Project-Management/Project-Management/" rel="next" title="Project Management">
+                  Project Management <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Carter Lin</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"mtseafood/mtseafood.github.io","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js"></script>
+
+</body>
+</html>

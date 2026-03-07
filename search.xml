@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Docker Compose</title>
+    <url>/software-docker-docker-compose/Docker-Compose/</url>
+    <content><![CDATA[<h2 id="What-is-Docker-Compose"><a href="#What-is-Docker-Compose" class="headerlink" title="What is Docker Compose?"></a>What is Docker Compose?</h2><p>Docker Compose is a tool that allows users to define multiple Docker containers’ configurations using a YAML file. With a simple command, you can start, stop, and manage all the containers of an entire application, making development and testing more efficient.</p>
+<h2 id="Difference-Between-Docker-and-Docker-Compose"><a href="#Difference-Between-Docker-and-Docker-Compose" class="headerlink" title="Difference Between Docker and Docker Compose"></a>Difference Between Docker and Docker Compose</h2><ul>
+<li><p><strong>Docker</strong>: Docker is a platform that allows developers to automate the deployment of applications inside lightweight containers. Each container runs a single application or service, making it easy to package and distribute applications along with their dependencies.</p>
+</li>
+<li><p><strong>Docker Compose</strong>: Docker Compose is a tool used to define and manage <strong>multi-container</strong> applications. It allows users to configure multiple containers in a single YAML file, enabling them to start, stop, and manage all containers with a single command. Docker Compose is particularly useful for applications that require multiple services, such as a web server and a database.</p>
+</li>
+</ul>
+<h2 id="Why-Use-Docker-Compose"><a href="#Why-Use-Docker-Compose" class="headerlink" title="Why Use Docker Compose?"></a>Why Use Docker Compose?</h2><ul>
+<li><strong>Simplified Management</strong>: Centralizes the management of multiple container configurations in a YAML file, reducing the complexity of manual operations.</li>
+<li><strong>Environment Consistency</strong>: Ensures that container configurations are consistent across development, testing, and production environments, minimizing issues caused by environmental differences.</li>
+<li><strong>Scalability</strong>: Easily add or remove services to adapt to changing requirements.</li>
+<li><strong>Automation</strong>: Supports one-click startup and shutdown of the entire application, improving development efficiency.</li>
+</ul>
+<h2 id="Install-using-the-repository"><a href="#Install-using-the-repository" class="headerlink" title="Install using the repository"></a>Install using the repository</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># For Linux systems</span></span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install docker-compose-plugin</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check if the installation was successful</span></span><br><span class="line">docker compose --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="Using-Docker-Compose"><a href="#Using-Docker-Compose" class="headerlink" title="Using Docker Compose"></a>Using Docker Compose</h3><p>The basic steps to use Docker Compose are as follows:</p>
+<ol>
+<li><p>Create a <code>docker-compose.yml</code> File: In your project directory, create a file named docker-compose.yml and define your services. For example:</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">web:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;80:80&quot;</span></span><br><span class="line"><span class="attr">db:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">    <span class="attr">POSTGRES_USER:</span> <span class="string">example</span></span><br><span class="line">    <span class="attr">POSTGRES_PASSWORD:</span> <span class="string">example</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Start the Services: Run the following command in the directory containing the docker-compose.yml file to start all defined services:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose up</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Stop the Services: To stop the services, you can use the following command:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose down</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Docker Compose is a powerful tool that helps developers manage and deploy multi-container applications more easily. With a simple YAML configuration, you can quickly start and stop an entire application, enhancing development efficiency and environmental consistency. Whether you are a beginner or an experienced developer, Docker Compose is an indispensable tool in your containerization development process.</p>
+<p>In next article, we will show some advanced usage of Docker Compose.</p>
+]]></content>
+      <categories>
+        <category>software, docker, docker-compose</category>
+      </categories>
+      <tags>
+        <tag>docker-compose, docker, software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker</title>
+    <url>/software/Docker/</url>
+    <content><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In today’s fast-paced development environment, the need for efficient software deployment and scalability is paramount. Docker has emerged as a groundbreaking technology that allows developers to easily package, deploy, and manage applications in isolated environments known as containers.</p>
+<h2 id="What-is-Docker"><a href="#What-is-Docker" class="headerlink" title="What is Docker?"></a>What is Docker?</h2><p>Docker is an open-source platform that automates the deployment of applications inside lightweight, portable containers. Containers are a standardized unit of software that encapsulate an application and all its dependencies, ensuring that it runs seamlessly across different computing environments.</p>
+<h2 id="Why-Use-Docker"><a href="#Why-Use-Docker" class="headerlink" title="Why Use Docker?"></a>Why Use Docker?</h2><ol>
+<li><p><strong>Portability:</strong> Docker containers can run on any machine that has Docker installed, making it easy to move applications between development, testing, and production environments.</p>
+</li>
+<li><p><strong>Isolation:</strong> Each Docker container runs in its own isolated environment, allowing developers to avoid conflicts between different software libraries and dependencies.</p>
+</li>
+<li><p><strong>Scalability:</strong> Docker enables easy scaling of applications by allowing multiple instances of a container to run simultaneously to handle increased loads.</p>
+</li>
+<li><p><strong>Efficiency:</strong> Containers share the host OS kernel, making them more lightweight than traditional virtual machines, which require a guest OS.</p>
+</li>
+</ol>
+<h2 id="Key-Concepts-in-Docker"><a href="#Key-Concepts-in-Docker" class="headerlink" title="Key Concepts in Docker"></a>Key Concepts in Docker</h2><ol>
+<li><p><strong>Images vs. Containers:</strong></p>
+<ul>
+<li><strong>Image:</strong> A Docker image is a read-only template used to create containers. Images contain the application code, libraries, and environment variables.</li>
+<li><strong>Container:</strong> A container is a running instance of an image. It is a lightweight, standalone, executable package that includes everything needed to run a piece of software.</li>
+</ul>
+</li>
+<li><p><strong>Dockerfile:</strong><br>A Dockerfile is a script containing a series of instructions to create a Docker image. It defines everything required to set up an application, including the base image, dependencies, and configuration settings.</p>
+</li>
+<li><p><strong>Docker Hub:</strong><br>Docker Hub is a cloud-based repository where developers can store and share Docker images. It provides a platform to find pre-built images and collaborate with other developers.</p>
+</li>
+</ol>
+<h2 id="Getting-Started-with-Docker"><a href="#Getting-Started-with-Docker" class="headerlink" title="Getting Started with Docker"></a>Getting Started with Docker</h2><ol>
+<li><p><strong>Installation:</strong><br>To start using Docker, you need to install Docker Desktop, which is available for Windows, macOS, and Linux. Follow the official installation instructions <a href="https://docs.docker.com/get-docker/">here</a>.</p>
+</li>
+<li><p><strong>Creating Your First Container:</strong><br>Use the following command to pull an image and run a simple container:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Building Your Own Image:</strong><br>Create a simple <code>Dockerfile</code> for a FastAPI application:</p>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> python:<span class="number">3.9</span>-slim</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="language-bash"> /app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> requirements.txt .</span></span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> pip install --no-cache-dir -r requirements.txt</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> . .</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;uvicorn&quot;</span>, <span class="string">&quot;app:app&quot;</span>, <span class="string">&quot;--host&quot;</span>, <span class="string">&quot;0.0.0.0&quot;</span>, <span class="string">&quot;--port&quot;</span>, <span class="string">&quot;8000&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<p>In this example, make sure your requirements.txt includes fastapi and uvicorn. Here’s a simple example of what that file might look like:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fastapi</span><br><span class="line">uvicorn</span><br></pre></td></tr></table></figure>
+
+<p>An example app.py file could look like this:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> fastapi <span class="keyword">import</span> FastAPI</span><br><span class="line">app = FastAPI()</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.get(<span class="params"><span class="string">&quot;/&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">read_root</span>():</span><br><span class="line"> <span class="keyword">return</span> &#123;<span class="string">&quot;Hello&quot;</span>: <span class="string">&quot;World&quot;</span>&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>To build an image from this Dockerfile, run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -t myfastapiapp .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Running Your Application:<br>After building your image, you can run your application in a container:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d -p 8000:8000 myfastapiapp</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Docker is revolutionizing the way software is developed and deployed by promoting portability, scalability, and efficiency. With its growing ecosystem and robust community support, Docker is becoming a standard tool for developers worldwide. Embracing Docker can significantly enhance your development workflow and lead to more reliable and consistent application deployments.</p>
+<h2 id="Further-Reading"><a href="#Further-Reading" class="headerlink" title="Further Reading"></a>Further Reading</h2><p>Official Docker Documentation: <a href="https://docs.docker.com/">Docker Docs</a><br>Explore Docker Compose for multi-container applications: <a href="https://docs.docker.com/compose/">Docker Compose</a></p>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>docker, container, software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dockerfile in practice</title>
+    <url>/software/Dockerfile-in-practice/</url>
+    <content><![CDATA[<h2 id="Use-Official-Base-Images"><a href="#Use-Official-Base-Images" class="headerlink" title="Use Official Base Images"></a>Use Official Base Images</h2><p>Start with official images from Docker Hub when possible. They are optimized and maintained by the community.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM python:3.9-slim</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image-Tag-Table-Comparison"><a href="#Image-Tag-Table-Comparison" class="headerlink" title="Image Tag Table Comparison"></a>Image Tag Table Comparison</h3><table>
+<thead>
+<tr>
+<th align="center">Tag</th>
+<th align="center">Description</th>
+<th align="center">Base OS</th>
+<th align="center">Size</th>
+<th align="center">Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">python:3.9</td>
+<td align="center">Official Python 3.9 image.</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">General-purpose Python applications.</td>
+</tr>
+<tr>
+<td align="center">python:3.9-slim</td>
+<td align="center">Slimmed down version of Python 3.9.</td>
+<td align="center">Debian-based</td>
+<td align="center">Smaller</td>
+<td align="center">Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td align="center">python:3.9-alpine</td>
+<td align="center">Python 3.9 on Alpine Linux.</td>
+<td align="center">Alpine Linux</td>
+<td align="center">Very small</td>
+<td align="center">Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td align="center">python:3.10</td>
+<td align="center">Official Python 3.10 image.</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">General-purpose Python applications.</td>
+</tr>
+<tr>
+<td align="center">python:3.10-slim</td>
+<td align="center">Slimmed down version of Python 3.10.</td>
+<td align="center">Debian-based</td>
+<td align="center">Smaller</td>
+<td align="center">Lightweight applications, reduced image size.</td>
+</tr>
+<tr>
+<td align="center">python:3.10-alpine</td>
+<td align="center">Python 3.10 on Alpine Linux.</td>
+<td align="center">Alpine Linux</td>
+<td align="center">Very small</td>
+<td align="center">Minimalist applications, highly efficient.</td>
+</tr>
+<tr>
+<td align="center">python:latest</td>
+<td align="center">Latest stable version of Python (currently 3.11+).</td>
+<td align="center">Debian-based</td>
+<td align="center">Larger</td>
+<td align="center">Always use the newest features and updates.</td>
+</tr>
+<tr>
+<td align="center">python:<version>-buster</td>
+<td align="center">Python image based on Debian Buster (e.g., python:3.9-buster).</td>
+<td align="center">Debian Buster</td>
+<td align="center">Medium</td>
+<td align="center">Applications needing Debian Buster compatibility.</td>
+</tr>
+<tr>
+<td align="center">python:<version>-bullseye</td>
+<td align="center">Python image based on Debian Bullseye (e.g., python:3.9-bullseye).</td>
+<td align="center">Debian Bullseye</td>
+<td align="center">Medium</td>
+<td align="center">Applications needing Debian Bullseye compatibility.</td>
+</tr>
+</tbody></table>
+<h2 id="Minimize-Layers"><a href="#Minimize-Layers" class="headerlink" title="Minimize Layers"></a>Minimize Layers</h2><p>Combine commands to reduce the number of layers in your image. Use &amp;&amp; to chain commands together.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RUN apt-get update &amp;&amp; apt-get install -y \</span><br><span class="line">    curl \</span><br><span class="line">    git \</span><br><span class="line">    &amp;&amp; rm -rf /var/lib/apt/lists/*</span><br></pre></td></tr></table></figure>
+
+<h2 id="Leverage-Caching"><a href="#Leverage-Caching" class="headerlink" title="Leverage Caching"></a>Leverage Caching</h2><p>Order your commands to take advantage of Docker’s caching mechanism. Place less frequently changing commands (like installing dependencies) at the top.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">COPY requirements.txt .</span><br><span class="line">RUN pip install -r requirements.txt</span><br><span class="line">COPY . .</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-dockerignore"><a href="#Use-dockerignore" class="headerlink" title="Use .dockerignore"></a>Use .dockerignore</h2><p>Create a .dockerignore file to exclude unnecessary files from being copied into the image, which can help reduce the image size.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.git</span><br><span class="line">node_modules</span><br><span class="line">*.log</span><br></pre></td></tr></table></figure>
+
+<h2 id="Specify-a-Non-Root-User"><a href="#Specify-a-Non-Root-User" class="headerlink" title="Specify a Non-Root User"></a>Specify a Non-Root User</h2><p>For security reasons, run your application as a non-root user.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RUN useradd -m myuser</span><br><span class="line">USER myuser</span><br></pre></td></tr></table></figure>
+
+<h2 id="Keep-Images-Small"><a href="#Keep-Images-Small" class="headerlink" title="Keep Images Small"></a>Keep Images Small</h2><p>Use lighter base images (like alpine) and remove unnecessary files after installation to keep your image size small.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RUN apk add --no-cache curl</span><br></pre></td></tr></table></figure>
+
+<h2 id="Use-Multi-Stage-Builds"><a href="#Use-Multi-Stage-Builds" class="headerlink" title="Use Multi-Stage Builds"></a>Use Multi-Stage Builds</h2><p>For complex applications, use multi-stage builds to separate the build environment from the runtime environment.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM golang:1.17 AS builder</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY . .</span><br><span class="line">RUN go build -o myapp</span><br><span class="line"></span><br><span class="line">FROM alpine:latest</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY --from=builder /app/myapp .</span><br><span class="line">CMD [&quot;./myapp&quot;]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Set-Environment-Variables"><a href="#Set-Environment-Variables" class="headerlink" title="Set Environment Variables"></a>Set Environment Variables</h2><p>Use ENV to define environment variables that can be reused throughout the Dockerfile.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ENV APP_HOME /app</span><br><span class="line">WORKDIR $APP_HOME</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>software</category>
+      </categories>
+      <tags>
+        <tag>docker, container, software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Frist  By Hexo</title>
+    <url>/hexo-tutorial/Frist-By-Hexo/</url>
+    <content><![CDATA[<p>Hello, world!</p>
+]]></content>
+      <categories>
+        <category>hexo tutorial</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Opentelemetry</title>
+    <url>/Opentelemetry/Opentelemetry/</url>
+    <content><![CDATA[<h1 id="OpenTelemetry-Logs-Traces-and-Metrics"><a href="#OpenTelemetry-Logs-Traces-and-Metrics" class="headerlink" title="OpenTelemetry: Logs, Traces, and Metrics"></a>OpenTelemetry: Logs, Traces, and Metrics</h1><p>OpenTelemetry is an open-source framework designed to collect, process, and export observability data from applications. It primarily involves three types of data: logs, traces, and metrics. Below is a detailed explanation of each, along with a Python example.</p>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging"></a>Logging</h2><p>Logging captures detailed information about events and messages occurring within your application.</p>
+<h3 id="Key-Concepts"><a href="#Key-Concepts" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
+<li><strong>Logger</strong>: Used to create and manage log records.</li>
+<li><strong>Log Record</strong>: Represents a single log entry.</li>
+</ul>
+<h3 id="Python-Example"><a href="#Python-Example" class="headerlink" title="Python Example"></a>Python Example</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opentelemetry-api opentelemetry-sdk</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> opentelemetry <span class="keyword">import</span> logs</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.logs <span class="keyword">import</span> LoggingProvider, ConsoleLogExporter</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.logs.export <span class="keyword">import</span> SimpleLogReader</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up logging</span></span><br><span class="line">logs.set_logger_provider(LoggingProvider())</span><br><span class="line">logger = logs.get_logger(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of creating and using logs</span></span><br><span class="line">logger.info(<span class="string">&quot;This is an informational message&quot;</span>)</span><br><span class="line">logger.error(<span class="string">&quot;This is an error message&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tracing"><a href="#Tracing" class="headerlink" title="Tracing"></a>Tracing</h2><p>Tracing helps track the flow of requests through your services, showing how different parts of your system interact.</p>
+<h3 id="Key-Concepts-1"><a href="#Key-Concepts-1" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
+<li><strong>Tracer</strong>: Creates and manages spans.</li>
+<li><strong>Span</strong>: Represents a single operation within a trace.</li>
+<li><strong>Context</strong>: Maintains the state of the current trace</li>
+</ul>
+<h3 id="Python-Example-1"><a href="#Python-Example-1" class="headerlink" title="Python Example"></a>Python Example</h3><p>Install Required Packages:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opentelemetry-api opentelemetry-sdk</span><br></pre></td></tr></table></figure>
+
+<p>Basic Tracing Setup:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> opentelemetry <span class="keyword">import</span> trace</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.trace <span class="keyword">import</span> TracerProvider, SpanProcessor</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.trace.export <span class="keyword">import</span> SimpleSpanProcessor, ConsoleSpanExporter</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up the Tracer Provider</span></span><br><span class="line">trace.set_tracer_provider(TracerProvider())</span><br><span class="line">tracer = trace.get_tracer(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up a span processor and exporter</span></span><br><span class="line">span_processor = SimpleSpanProcessor(ConsoleSpanExporter())</span><br><span class="line">trace.get_tracer_provider().add_span_processor(span_processor)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of creating and using spans</span></span><br><span class="line"><span class="keyword">with</span> tracer.start_as_current_span(<span class="string">&quot;example-span&quot;</span>) <span class="keyword">as</span> span:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tracing something within the span&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Nested span example</span></span><br><span class="line">    <span class="keyword">with</span> tracer.start_as_current_span(<span class="string">&quot;nested-span&quot;</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Tracing something within a nested span&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Metrics"><a href="#Metrics" class="headerlink" title="Metrics"></a>Metrics</h2><p>Metrics provide numerical data about the performance and state of your application over time.</p>
+<h3 id="Key-Concepts-2"><a href="#Key-Concepts-2" class="headerlink" title="Key Concepts:"></a>Key Concepts:</h3><ul>
+<li><strong>Meter</strong>: Used to create and manage metrics.</li>
+<li><strong>Counter</strong>: Increases over time, e.g., counting requests.</li>
+<li><strong>Histogram</strong>: Records the distribution of values, such as response times.</li>
+<li><strong>Gauge</strong>: Records a value that can go up and down, such as active connections.</li>
+</ul>
+<h3 id="Python-Example-2"><a href="#Python-Example-2" class="headerlink" title="Python Example"></a>Python Example</h3><p>Install Required Packages:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install opentelemetry-api opentelemetry-sdk</span><br></pre></td></tr></table></figure>
+<p>Basic Metrics Setup:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> opentelemetry <span class="keyword">import</span> metrics</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.metrics <span class="keyword">import</span> MeterProvider, ConsoleMetricsExporter</span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.metrics.export <span class="keyword">import</span> SimpleMetricReader</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up the Meter Provider</span></span><br><span class="line">meter_provider = MeterProvider()</span><br><span class="line">metrics.set_meter_provider(meter_provider)</span><br><span class="line">meter = metrics.get_meter(__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set up a metric reader and exporter</span></span><br><span class="line">metric_reader = SimpleMetricReader(ConsoleMetricsExporter())</span><br><span class="line">meter_provider.start_pipeline(meter, metric_reader)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of creating and using metrics</span></span><br><span class="line">counter = meter.create_counter(<span class="string">&quot;example_counter&quot;</span>, description=<span class="string">&quot;Counts things&quot;</span>)</span><br><span class="line">counter.add(<span class="number">1</span>)  <span class="comment"># Increment counter by 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># For histogram example:</span></span><br><span class="line"><span class="keyword">from</span> opentelemetry.sdk.metrics <span class="keyword">import</span> Histogram</span><br><span class="line">histogram = meter.create_histogram(<span class="string">&quot;example_histogram&quot;</span>, description=<span class="string">&quot;Records values&quot;</span>)</span><br><span class="line">histogram.record(<span class="number">5</span>)  <span class="comment"># Record a value of 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gauge example:</span></span><br><span class="line">gauge = meter.create_gauge(<span class="string">&quot;example_gauge&quot;</span>, description=<span class="string">&quot;Records current value&quot;</span>)</span><br><span class="line">gauge.<span class="built_in">set</span>(<span class="number">42</span>)  <span class="comment"># Set gauge to 42</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li><strong>Logs</strong> capture detailed events or messages about what’s happening in your application, often used for debugging.</li>
+<li><strong>Traces</strong> track the flow of requests through various services, showing the path and timing of each request.</li>
+<li><strong>Metrics</strong> collect numerical data over time, like request counts or error rates, to monitor performance and health.</li>
+</ul>
+<p>By using OpenTelemetry with Python, you can effectively gather and analyze these three types of observability data, leading to better insights into your application’s performance and behavior.</p>
+]]></content>
+      <categories>
+        <category>Opentelemetry</category>
+      </categories>
+      <tags>
+        <tag>opentelemetry</tag>
+        <tag>logs</tag>
+        <tag>traces</tag>
+        <tag>metrics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management - Five Process Group</title>
+    <url>/Project-Management/Project-Management-Five-Process-Group/</url>
+    <content><![CDATA[<h2 id="Five-Process-Group"><a href="#Five-Process-Group" class="headerlink" title="Five Process Group"></a>Five Process Group</h2><p>The five main processes are initiation, planning, execution, monitoring, and closure. The following events occur in the five main processes:</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Process Group</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Initiating</td>
+<td>Define and authorize the project. Identify the Business Case.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Planning</td>
+<td>Define and refine goals, plan action steps.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Executing</td>
+<td>Integrate manpower and resources to carry out the project.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Monitoring and Controlling</td>
+<td>Regularly measure and monitor progress to control the project and achieve goals.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Closing</td>
+<td>Ensure that the products, services, or results of the project are accepted, and orderly close the project.</td>
+</tr>
+</tbody></table>
+<h2 id="Project-Life-Cycle"><a href="#Project-Life-Cycle" class="headerlink" title="Project Life Cycle"></a>Project Life Cycle</h2><p>In the early stages of a project, stakeholders have a significant influence on the direction of the project, and the cost of changes is relatively low. However, as the project progresses to later stages, stakeholders’ ability to influence decreases, and the cost of changes increases. In simple terms, this is the concept of “the ship has sailed.” </p>
+<p>It’s important to note that a decrease in influence over the project’s direction does not mean a decrease in influence over the project’s success or failure. Discontented individuals can still easily cause the project to fail.</p>
+<img src="/Project-Management/Project-Management-Five-Process-Group/image.png" class="">
+
+
+<h2 id="Common-Tools"><a href="#Common-Tools" class="headerlink" title="Common Tools"></a>Common Tools</h2><h3 id="Goal-Setting"><a href="#Goal-Setting" class="headerlink" title="Goal Setting"></a>Goal Setting</h3><p>Having goals provides direction; without goals or with too many goals, it is difficult to reach a consensus. Goals should be limited to three, prioritized accordingly, and must meet the SMART criteria. Many people say that leisure is a goal, but leisure can serve various purposes such as resting, experiencing different lifestyles, connecting with others, and meeting new people, etc. Different goals will generate different action plans.</p>
+<h3 id="Business-Case"><a href="#Business-Case" class="headerlink" title="Business Case"></a>Business Case</h3><p>All projects must be cost-effective. Are the products, services, and results generated by the project worth our time and effort?</p>
+<h2 id="Common-Misconceptions"><a href="#Common-Misconceptions" class="headerlink" title="Common Misconceptions"></a>Common Misconceptions</h2><h3 id="Goals-cannot-be-changed"><a href="#Goals-cannot-be-changed" class="headerlink" title="Goals cannot be changed"></a>Goals cannot be changed</h3><p>As long as the sponsor agrees, goals can be changed. Of course, each time a goal is modified, the team will need some time to refocus, which is something to be mindful of.</p>
+<h3 id="Plans-cannot-change"><a href="#Plans-cannot-change" class="headerlink" title="Plans cannot change"></a>Plans cannot change</h3><p>If we could control the weather and prevent illness, then plans could certainly remain unchanged. Unfortunately, we are neither gods nor can we control the environment. When circumstances change, it is natural to adjust plans. Just like when the wind changes direction, if we do not adjust the sails, will we reach our destination?</p>
+<p>However, changing plans can be painful, especially after a lot of preparation and processes have been set. This is why agile project management is becoming popular in frequently changing environments. Agile methods emphasize short iterations to avoid spending excessive time on plans that are bound to change. Nevertheless, it is still necessary to set mid-to-long-term goals to serve as a direction.</p>
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+      <tags>
+        <tag>project management, process group</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management Nine Knowledge Area</title>
+    <url>/Project-Management/Project-Management-Nine-Knowledge-Area/</url>
+    <content><![CDATA[<p>The nine knowledge areas of project management are:</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Knowledge Area</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Integration</td>
+<td>Coordinates all processes and determines priorities.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Scope</td>
+<td>Defines what should and should not be included to achieve project goals.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Time</td>
+<td>Ensures the project is completed within the specified timeframe, including defining activities, scheduling, estimating activity durations, and controlling the schedule.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cost</td>
+<td>Ensures the project is completed within authorized costs, involving cost estimation, budgeting, and control.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Quality</td>
+<td>Ensures outputs meet customer expectations through quality planning, assurance, and control.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Human Resource</td>
+<td>Enables the team to achieve project goals through human resource planning, team acquisition, capability enhancement, and management.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Communication</td>
+<td>Ensures information reaches the right people at the right time, including communication planning, information distribution, performance reporting, and stakeholder management.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Risk</td>
+<td>Increases the likelihood of positive outcomes and decreases the likelihood of negative outcomes through risk management planning, identification, analysis, and response planning.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Procurement</td>
+<td>Involves acquiring resources that the team does not have.</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Project Management - Stackholder</title>
+    <url>/Project-Management/Project-Management-Stackholder/</url>
+    <content><![CDATA[<h1 id="Roles-in-Project-Management"><a href="#Roles-in-Project-Management" class="headerlink" title="Roles in Project Management"></a>Roles in Project Management</h1><p>In the framework of software management, there are four roles in running a project:</p>
+<h2 id="1-Project-Sponsor"><a href="#1-Project-Sponsor" class="headerlink" title="1. Project Sponsor"></a>1. Project Sponsor</h2><p><strong>Quantity:</strong> One<br>The person who funds the project, usually a senior manager, holds political responsibility for the project’s success or failure.</p>
+<h2 id="2-Project-Manager-PM"><a href="#2-Project-Manager-PM" class="headerlink" title="2. Project Manager (PM)"></a>2. Project Manager (PM)</h2><p><strong>Quantity:</strong> One<br>The person who actually runs and monitors the project, holding direct responsibility for its success or failure.</p>
+<h2 id="3-Project-Team"><a href="#3-Project-Team" class="headerlink" title="3. Project Team"></a>3. Project Team</h2><p><strong>Quantity:</strong> Several to many<br>Those who participate in the project.</p>
+<h2 id="4-Stakeholders"><a href="#4-Stakeholders" class="headerlink" title="4. Stakeholders"></a>4. Stakeholders</h2><p><strong>Quantity:</strong> A truckload to countless<br>Everyone who has a say in the project.</p>
+<h1 id="4-Steps-to-Create-a-Project-Stakeholder-Analysis-Diagram"><a href="#4-Steps-to-Create-a-Project-Stakeholder-Analysis-Diagram" class="headerlink" title="4 Steps to Create a Project Stakeholder Analysis Diagram"></a>4 Steps to Create a Project Stakeholder Analysis Diagram</h1><p>Identifying and managing your project stakeholders is an excellent way to lay the foundation for a successful project. When key project stakeholders trust you, they are more likely to provide support, which can be crucial throughout the project lifecycle. Conversely, without supportive stakeholders, you may find yourself having to set stakeholder expectations halfway through the project, which can lead to changes and unnecessary project risks. To avoid this, you must take the following four steps to create an effective project stakeholder analysis diagram.</p>
+<h2 id="Step-1-Identify-Project-Stakeholders"><a href="#Step-1-Identify-Project-Stakeholders" class="headerlink" title="Step 1: Identify Project Stakeholders"></a>Step 1: Identify Project Stakeholders</h2><p>Before managing stakeholder expectations, you first need to know who the stakeholders are. Be sure to include both internal and external stakeholders. To figure out who your project stakeholders are, ask yourself:</p>
+<ul>
+<li>Who cares about this project?</li>
+<li>Who will be affected by this project?</li>
+<li>Who can influence this project?</li>
+<li>Who can approve&#x2F;reject this project?</li>
+</ul>
+<h2 id="Step-2-Determine-the-Influence-and-Interest-Levels-of-Project-Stakeholders"><a href="#Step-2-Determine-the-Influence-and-Interest-Levels-of-Project-Stakeholders" class="headerlink" title="Step 2: Determine the Influence and Interest Levels of Project Stakeholders"></a>Step 2: Determine the Influence and Interest Levels of Project Stakeholders</h2><p>If high-level project stakeholders participate, they can truly elevate your project to a higher level. The best way to confirm high-level involvement is to establish a clear stakeholder analysis diagram that outlines the influence and interest levels of each project stakeholder. This matrix structure (sometimes referred to as the power-interest matrix) is the best way to visually represent the four main groups of project stakeholders.</p>
+<p>The four main groups of project stakeholders are:</p>
+<ol>
+<li><strong>High Influence and High Interest</strong>: Manage Closely</li>
+<li><strong>High Influence and Low Interest</strong>: Keep Satisfied</li>
+<li><strong>Low Influence and High Interest</strong>: Keep Informed</li>
+<li><strong>Low Influence and Low Interest</strong>: Monitor</li>
+</ol>
+<img src="/Project-Management/Project-Management-Stackholder/image.png" class="">
+
+
+<h2 id="Step-3-Understand-Stakeholder-Needs"><a href="#Step-3-Understand-Stakeholder-Needs" class="headerlink" title="Step 3: Understand Stakeholder Needs"></a>Step 3: Understand Stakeholder Needs</h2><p>The reality is that some stakeholders may disagree with specific elements of the project. As a project manager, you are responsible for understanding their needs and perspectives, and finding solutions that will not negatively impact the success of the project. You are not obligated to do everything that stakeholders ask of you, but you are obligated to listen to and understand their needs.</p>
+<p>Sometimes, certain individuals may seem like “difficult stakeholders,” but in fact, their priorities may simply differ from yours. Your work might even interrupt parts of their workflow. If you try to see things from their perspective, you will have a better chance of finding solutions and turning the situation into a win-win outcome.</p>
+<p>When in doubt, put yourself in others’ shoes. Ask yourself:</p>
+<ul>
+<li>What do they need?</li>
+<li>What level of communication do they want?</li>
+<li>What is the most effective communication strategy?</li>
+<li>Do these stakeholders have anyone they influence, or are they influenced by others?</li>
+<li>How do you accurately identify the interests of stakeholders?</li>
+</ul>
+<h2 id="Step-4-Include-Project-Stakeholders-in-the-Recipient-List"><a href="#Step-4-Include-Project-Stakeholders-in-the-Recipient-List" class="headerlink" title="Step 4: Include Project Stakeholders in the Recipient List"></a>Step 4: Include Project Stakeholders in the Recipient List</h2><p>Once you have identified your project stakeholders and considered their needs, it is essential to invite them to participate in project planning workshops and kickoff meetings (if applicable). Key project stakeholders should also sign off on the project charter, project plan, project objectives, and project scope.</p>
+<h2 id="Common-Myths"><a href="#Common-Myths" class="headerlink" title="Common Myths"></a>Common Myths</h2><ol>
+<li><p><strong>Every stakeholder needs to be satisfied.</strong><br>Stakeholder management involves categorization, allowing us to focus our efforts where they matter most and avoid the dilemma of trying to please everyone.</p>
+</li>
+<li><p><strong>Stakeholders only need to be dealt with.</strong><br>Valuable insights and details that can significantly impact the success or failure of a project can be gained from stakeholders. Properly utilizing these insights can lead to smoother project execution.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+      <tags>
+        <tag>Project management, Stackholder</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management - Time Management</title>
+    <url>/Project-Management/Project-Management-Time-Management/</url>
+    <content><![CDATA[<h1 id="Waterfull"><a href="#Waterfull" class="headerlink" title="Waterfull"></a>Waterfull</h1><h2 id="Milestone"><a href="#Milestone" class="headerlink" title="Milestone"></a>Milestone</h2><p>Some activities are far more important and representative than others, so we treat them as milestones to see how far we are from our plans. Examples include graduating from college, getting married, having children, starting a business, and retiring.</p>
+<h2 id="Rolling-Wave-Planning"><a href="#Rolling-Wave-Planning" class="headerlink" title="Rolling Wave Planning"></a>Rolling Wave Planning</h2><p>This is probably the term in PMBOK that is closest to Agile. It uses a method of Progressive Elaboration, where we plan in detail and specifically for the near term, while keeping the long-term plans rough and abstract. For instance, at the age of twelve, one might think about how to study in junior high school to best benefit their future and establish specific plans, whereas thinking about the details of marriage or college right now may simply be speculative and a waste of time.</p>
+<h2 id="Schedule-Compression"><a href="#Schedule-Compression" class="headerlink" title="Schedule Compression"></a>Schedule Compression</h2><p>Under the premise of not changing the project scope, the goal is to shorten the overall duration of the project. There are two common methods:</p>
+<ol>
+<li><p><strong>Crashing</strong>: This means spending money to buy time, such as hiring an excellent tutor to make courses easier to understand. Or, in the case of marriage, offering a bride price and a house to reduce the time spent finding a girlfriend. It’s important to note that while the project timeline may shorten, the goal may not be achieved. For instance, if the original intention was to find someone who loves you for marriage, it might change to seeking someone who loves money instead. However, if the only goal is to get married to anyone, then it doesn’t matter.</p>
+</li>
+<li><p><strong>Fast Tracking</strong>: This involves changing originally sequential activities to be carried out in parallel. A common example is a part-time job while studying, or studying at university while having children. Typically, the cost of Fast Tracking is an increased risk, as proceeding before the right time can</p>
+</li>
+</ol>
+<h2 id="Common-way-to-estimate-the-time"><a href="#Common-way-to-estimate-the-time" class="headerlink" title="Common way to estimate the time"></a>Common way to estimate the time</h2><ol>
+<li><strong>Expert Judgment</strong>: Consult familiar team members or external experts for evaluations.</li>
+<li><strong>Analogous Estimation</strong>: Estimate time based on similar past projects.</li>
+<li><strong>Parametric Estimation</strong>: Use historical data parameters for calculations, suitable for simple tasks. For example, cabinet installation time is estimated using dimensions, but higher carpentry complexity increases variability.</li>
+<li><strong>Three-Point Estimation</strong>: Divide estimates into “most likely,” “pessimistic,” and “optimistic” values, useful for projects with risks and uncertainties.</li>
+<li><strong>Bottom-Up Estimation</strong>: Start estimating from the lowest Work Breakdown Structure (WBS) level and accumulate upwards.</li>
+</ol>
+<h2 id="Scrum"><a href="#Scrum" class="headerlink" title="Scrum"></a>Scrum</h2><h3 id="Story-Points-Represent-“Time-Scale”-of-Tasks"><a href="#Story-Points-Represent-“Time-Scale”-of-Tasks" class="headerlink" title="Story Points Represent: “Time Scale” of Tasks"></a>Story Points Represent: “Time Scale” of Tasks</h3><pre><code>&quot;People actually do not have much ability to estimate the time required for big tasks.&quot;
+</code></pre>
+<p>Each Sprint may contain dozens of Stories, and each Story has its own Story Point used to measure the “time scale” of a single task. The assessment of the time scale includes factors such as “complexity,” “number of people involved,” “familiarity,” “difficulty,” and “basic operation time.” Generally, the more complex the task, the more people involved, and the less familiar it is… the more time it will take.</p>
+<p>Since it is a measure of “time scale,” it, of course, “excludes” the value brought by completing the task, the money that needs to be spent, and so on.</p>
+<h3 id="Simple-Process-for-Story-Point-Estimation"><a href="#Simple-Process-for-Story-Point-Estimation" class="headerlink" title="Simple Process for Story Point Estimation"></a>Simple Process for Story Point Estimation</h3><p>Estimating story points is similar to a simple show of hands. Here’s our company’s process:</p>
+<ol>
+<li><p><strong>Complete Story Overview:</strong><br>Begin the planning meeting by discussing all aspects of the stories (goals, methods, criteria, etc.).</p>
+</li>
+<li><p><strong>Establish Criteria for Evaluation:</strong><br>Set foundational standards using a couple of stories to create a consensus. For example, if you think a story is a 5-point and I think it’s a 13-point, we aim to adjust them to a common team score, like a 5.</p>
+</li>
+<li><p><strong>Individual Scoring:</strong><br>Members score the stories independently on a form using Fibonacci numbers (1-21). This is done silently, without discussion or questions. After everyone has submitted their scores, discussion can begin.</p>
+<p><em>(If there are issues, use “?” or “21” to highlight concerns, as asking questions afterward would be redundant.)</em></p>
+</li>
+<li><p><strong>Discuss Significant Discrepancies:</strong><br>Focus on stories with large differences in scores where consensus is not reached.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+      <tags>
+        <tag>Time management, Project Management</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pytest Extension</title>
+    <url>/Pytest/Pytest-Extension/</url>
+    <content><![CDATA[<h1 id="pytest-related-Packages"><a href="#pytest-related-Packages" class="headerlink" title="pytest-related Packages"></a>pytest-related Packages</h1><h2 id="pytest-xdist"><a href="#pytest-xdist" class="headerlink" title="pytest-xdist"></a>pytest-xdist</h2><p><code>pytest-xdist</code> is a plugin for pytest that allows you to run your tests in parallel across multiple CPUs or even on remote machines. This can significantly speed up your test execution time, especially for large test suites.</p>
+<ul>
+<li><strong>Documentation</strong>: <a href="https://pytest-xdist.readthedocs.io/en/latest/">pytest-xdist</a></li>
+</ul>
+<h2 id="pytest-cov"><a href="#pytest-cov" class="headerlink" title="pytest-cov"></a>pytest-cov</h2><p><code>pytest-cov</code> is a plugin that provides coverage reporting for your tests. It integrates with the coverage.py tool to measure code coverage and generate reports, making it easier to identify untested parts of your codebase.</p>
+<ul>
+<li><strong>Documentation</strong>: <a href="https://pytest-cov.readthedocs.io/en/latest/">pytest-cov</a></li>
+</ul>
+<h2 id="pytest-html"><a href="#pytest-html" class="headerlink" title="pytest-html"></a>pytest-html</h2><p><code>pytest-html</code> is a plugin that generates HTML reports for your test runs. This allows you to easily visualize the results of your tests, including detailed information about passed and failed tests, along with logs and screenshots.</p>
+<ul>
+<li><strong>Documentation</strong>: <a href="https://pytest-html.readthedocs.io/en/latest/">pytest-html</a></li>
+</ul>
+<h2 id="pytest-sugar"><a href="#pytest-sugar" class="headerlink" title="pytest-sugar"></a>pytest-sugar</h2><p><code>pytest-sugar</code> is a plugin that enhances the default output of pytest by providing a more visually appealing and informative test run report. It adds progress bars, colored output, and additional statistics to improve the overall testing experience.</p>
+<ul>
+<li><strong>Documentation</strong>: <a href="https://github.com/Frozenball/pytest-sugar">pytest-sugar</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Pytest</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pytest</tag>
+        <tag>plugin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management</title>
+    <url>/Project-Management/Project-Management/</url>
+    <content><![CDATA[<h2 id="Pareto-principle-80-20-principle"><a href="#Pareto-principle-80-20-principle" class="headerlink" title="Pareto principle (80&#x2F;20 principle)"></a>Pareto principle (80&#x2F;20 principle)</h2><h3 id="Productivity"><a href="#Productivity" class="headerlink" title="Productivity"></a>Productivity</h3><p>You can use the 80&#x2F;20 rule to prioritize the tasks that must be completed first during the day.<br>The concept is that by completing the 20% of tasks on your entire task list that should be prioritized, you can achieve 80% of your daily work results. Therefore, to accomplish the most impactful work, you should identify which tasks have the greatest impact on the team and focus your efforts on those tasks throughout the day.</p>
+<h3 id="Descsion-making"><a href="#Descsion-making" class="headerlink" title="Descsion making"></a>Descsion making</h3><p>Suppose you work at an e-commerce company. You have reviewed 100 recent customer service complaints and found that most of the complaints were due to customers receiving damaged products. After calculating the amount of refunds your team has issued for damaged products, you discovered that 80% of the refunds given were for damaged products. Your company wants to prevent the operations related to providing refunds for damaged products, so you view this issue as a priority solution.</p>
+<h2 id="Sufficiency-of-Information-for-Requirements"><a href="#Sufficiency-of-Information-for-Requirements" class="headerlink" title="Sufficiency of Information for Requirements"></a>Sufficiency of Information for Requirements</h2><p>What problems are currently being encountered?<br>What possible solutions could there be?<br>What benefits will come from solving this problem, or what difficulties will it resolve?</p>
+<h2 id="Requirement-Analysis"><a href="#Requirement-Analysis" class="headerlink" title="Requirement Analysis"></a>Requirement Analysis</h2><ul>
+<li>Clarify the purpose of requirements: Understand the business objectives and user needs behind the requirements, such as whether to improve conversion rates, enhance user experience, or increase user numbers.</li>
+<li>Define business value: Quantify the impact of requirements on business value, such as revenue increase, cost reduction, and heightened user engagement. Business value helps stakeholders understand the importance of the requirements. </li>
+<li>Technical feasibility assessment: Collaborate with the technical team to analyze the technical challenges of the requirements, including development complexity, system compatibility, and feasibility. This can help all parties evaluate implementation costs and risks.</li>
+</ul>
+<h2 id="80-20法則"><a href="#80-20法則" class="headerlink" title="80&#x2F;20法則"></a>80&#x2F;20法則</h2><p>生產力<br>您可以使用 80&#x2F;20 法則來優先執行一天當中必須先完成的任務。 </p>
+<p>其概念是完成整個任務清單中 20% 最應優先執行的任務，就能為您當天的工作成果帶來 80% 的影響。有鑑於此，若要完成最具影響力的工作，就應辨別哪些任務對團隊有最大的影響，並在一天當中專心投入這些任務。</p>
+<p>做決策<br>假設您在一家電子商務公司工作。您看了近期有關客戶服務的 100 份投訴，並且發現大部分的投訴原因是客戶收到破損產品。您的團隊針對破損產品而提供退款的金額做了計算後，發現給出去的退款中有 80% 是用在破損產品的退款。您的公司想要防止為破損產品提供退款的相關作業，因此您將這個問題視為優先執行的解決方案。 </p>
+<h2 id="需求的資訊充足性"><a href="#需求的資訊充足性" class="headerlink" title="需求的資訊充足性"></a>需求的資訊充足性</h2><ul>
+<li>目前遇到什麼問題？</li>
+<li>可能可以有什麼解法？</li>
+<li>這個問題解決後，會帶來什麼好處，或者解決哪些困難？</li>
+</ul>
+<p>最典型的 user story 公式就是：作為 {某種使用者} (Who)，我想要 {做到某件事}(What)，這樣我就可以 {達到什麼目標}(Why)。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><ul>
+<li>明確需求目的：了解需求背後的業務目標和使用者需求，例如是否提高轉換率、提升使用體驗或增加用戶數。</li>
+<li>定義商業價值：將需求對商業價值進行量化，例如收入增加、成本降低、使用者黏性提升等。商業價值有助於利益相關者理解需求的重要性。</li>
+<li>技術可行性評估：與技術團隊合作，分析需求的技術挑戰，包括開發複雜度、系統兼容性和可行性。這樣可以幫助各方評估實施成本和風險。</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="https://asana.com/zh-tw/resources/pareto-principle-80-20-rule">https://asana.com/zh-tw/resources/pareto-principle-80-20-rule</a></li>
+<li><a href="https://m-h.medium.com/how-to-deal-with-requests-eb477c037688">https://m-h.medium.com/how-to-deal-with-requests-eb477c037688</a></li>
+<li><a href="https://nabi.104.com.tw/posts/nabi_post_33be1aa5-ac63-4dd8-b1d9-6096ea27fc0f">https://nabi.104.com.tw/posts/nabi_post_33be1aa5-ac63-4dd8-b1d9-6096ea27fc0f</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+      <tags>
+        <tag>project-management, PM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pytest Fixture</title>
+    <url>/Pytest/Pytest-Fixture/</url>
+    <content><![CDATA[<h1 id="Understanding-Pytest-Fixtures-A-Comprehensive-Guide"><a href="#Understanding-Pytest-Fixtures-A-Comprehensive-Guide" class="headerlink" title="Understanding Pytest Fixtures: A Comprehensive Guide"></a>Understanding Pytest Fixtures: A Comprehensive Guide</h1><h2 id="What-is-a-Fixture"><a href="#What-is-a-Fixture" class="headerlink" title="What is a Fixture?"></a>What is a Fixture?</h2><p>A fixture in <code>pytest</code> is a function that sets up some context or state for your tests. It allows you to create reusable test setups, reducing code duplication and improving test clarity. Fixtures can manage resources like database connections, file handles, or any other setup needed for your tests.</p>
+<h2 id="Defining-Fixtures"><a href="#Defining-Fixtures" class="headerlink" title="Defining Fixtures"></a>Defining Fixtures</h2><p>To define a fixture, use the <code>@pytest.fixture</code> decorator. Here’s a simple example:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sample_data</span>():</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Using-Fixtures-in-Tests"><a href="#Using-Fixtures-in-Tests" class="headerlink" title="Using Fixtures in Tests"></a>Using Fixtures in Tests</h2><p>You can use a fixture by including it as an argument in your test function:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test_sum</span>(<span class="params">sample_data</span>):</span><br><span class="line">    <span class="keyword">assert</span> <span class="built_in">sum</span>(sample_data) == <span class="number">15</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Fixture-Scope"><a href="#Fixture-Scope" class="headerlink" title="Fixture Scope"></a>Fixture Scope</h2><p>Fixtures can have different scopes that determine how often they are invoked:</p>
+<ul>
+<li>function: Each function or method is called.</li>
+<li>class: Each class is called once; a class can have multiple methods.</li>
+<li>module: Each .py file is called once; the file contains multiple functions and classes.</li>
+<li>session: Multiple files are called once, can be called across .py files; each .py file is a module.</li>
+</ul>
+<ol>
+<li><p>Function Scope (Default)<br>This is the default scope. The fixture is invoked for each test function that uses it.</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture()</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">first</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nGetting username&quot;</span>)</span><br><span class="line">    a = <span class="string">&quot;carterlin&quot;</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&quot;function&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">second</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nGetting password&quot;</span>)</span><br><span class="line">    b = <span class="string">&quot;123456&quot;</span></span><br><span class="line">    <span class="keyword">return</span> b</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_1</span>(<span class="params">first</span>):</span><br><span class="line">    <span class="string">&quot;Passing fixture to test case&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Testing account: %s&quot;</span> % first)</span><br><span class="line">    <span class="keyword">assert</span> first == <span class="string">&quot;carterlin&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_2</span>(<span class="params">second</span>):</span><br><span class="line">    <span class="string">&quot;Passing fixture to test case&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Testing password: %s&quot;</span> % second)</span><br><span class="line">    <span class="keyword">assert</span> second == <span class="string">&quot;123456&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> Output:</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==================================== 2 passed in 0.00s ====================================</span><br><span class="line">&gt; pytest pytest-fixture-function.py -s -v</span><br><span class="line">pytest-fixture-function.py::test_1 </span><br><span class="line">Getting username</span><br><span class="line">Testing account: carterlin</span><br><span class="line">PASSED</span><br><span class="line">pytest-fixture-function.py::test_2 </span><br><span class="line">Getting password</span><br><span class="line">Testing password: 123456</span><br><span class="line">PASSED</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Class Scope<br>When the fixture is at the class level, if multiple test cases in a class call this fixture, then this fixture is executed only once before all the test cases in that class start.</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&quot;class&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">first</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nGet username, scope is class level and only runs once&quot;</span>)</span><br><span class="line">    a = <span class="string">&quot;carterlin&quot;</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TestCase</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_1</span>(<span class="params">self, first</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;Passing fixture to test case&#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Test account: %s&quot;</span> % first)</span><br><span class="line">        <span class="keyword">assert</span> first == <span class="string">&quot;carterlin&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">test_2</span>(<span class="params">self, first</span>):</span><br><span class="line">        <span class="string">&#x27;&#x27;&#x27;Passing fixture to test case&#x27;&#x27;&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Test account: %s&quot;</span> % first)</span><br><span class="line">        <span class="keyword">assert</span> first == <span class="string">&quot;carterlin&quot;</span></span><br></pre></td></tr></table></figure>
+<p> Output:</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; pytest pytest-fixture-class.py -s -v                                                                       </span><br><span class="line">pytest-fixture-class.py::TestCase::test_1 </span><br><span class="line">Get username, scope is class level and only runs once</span><br><span class="line">Test account: carterlin</span><br><span class="line">PASSED</span><br><span class="line">pytest-fixture-class.py::TestCase::test_2 Test account: carterlin</span><br><span class="line">PASSED</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Module Scope<br>When the fixture is at the module level, it only runs once before all tests in the current .py script start.</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&#x27;module&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">module_fixture</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up module fixture&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down module fixture&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_one</span>(<span class="params">module_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_one&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_two</span>(<span class="params">module_fixture</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Running test_two&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p> Output:</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Setting up module fixture</span><br><span class="line">Running test_one</span><br><span class="line">Running test_two</span><br><span class="line">Tearing down module fixture</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Session Scope<br>A session-scoped fixture can be used across multiple .py modules. If several test cases only need to call the fixture once, set it in the conftest.py file. This file is automatically recognized by pytest. Placing it in the project root allows global access, while placing it in a specific package limits its use to that package.</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">conftest.py</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture(<span class="params">scope=<span class="string">&quot;session&quot;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">first</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\nGetting username, the session scope runs only once across multiple .py modules&quot;</span>)</span><br><span class="line">    username = <span class="string">&quot;carterlin&quot;</span></span><br><span class="line">    <span class="keyword">return</span> username</span><br></pre></td></tr></table></figure>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#test-fixture-1.py</span></span><br><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_1</span>(<span class="params">first</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Test account: <span class="subst">&#123;first&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">assert</span> first == <span class="string">&quot;carterlin&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#test-fixture-2.py</span></span><br><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_1</span>(<span class="params">first</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Test Account: <span class="subst">&#123;first&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">assert</span> first == <span class="string">&quot;carterlin&quot;</span></span><br></pre></td></tr></table></figure>
+<p> Output:</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; pytest test-fixture-1.py test-fixture-2.py -s -v</span><br><span class="line">=================================== test session starts ===================================</span><br><span class="line">platform darwin -- Python 3.11.6, pytest-8.3.2, pluggy-1.5.0 -- /opt/homebrew/opt/python@3.11/bin/python3.11</span><br><span class="line">cachedir: .pytest_cache</span><br><span class="line">rootdir: /Users/carter/hello-python-test/pytest-fixture-demo/pytest-session</span><br><span class="line">plugins: anyio-3.7.1</span><br><span class="line">collected 2 items                                                                         </span><br><span class="line"></span><br><span class="line">test-fixture-1.py::test_1 </span><br><span class="line">Getting username, the session scope runs only once across multiple .py modules</span><br><span class="line">Test account: carterlin</span><br><span class="line">PASSED</span><br><span class="line">test-fixture-2.py::test_1 Test Account: carterlin</span><br><span class="line">PASSED</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Yielding-Fixtures"><a href="#Yielding-Fixtures" class="headerlink" title="Yielding Fixtures"></a>Yielding Fixtures</h3><p>Using yield in fixtures allows you to separate setup and teardown logic. Code before yield runs before the test, and code after runs after:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">resource</span>():</span><br><span class="line">    res = create_resource()</span><br><span class="line">    <span class="keyword">yield</span> res</span><br><span class="line">    res.cleanup()</span><br></pre></td></tr></table></figure>
+
+<h3 id="Parameterized-Fixtures"><a href="#Parameterized-Fixtures" class="headerlink" title="Parameterized Fixtures"></a>Parameterized Fixtures</h3><p>Parameterized fixtures allow you to run a test with multiple sets of data:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture(<span class="params">params=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">param_fixture</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> request.param</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_parameterized</span>(<span class="params">param_fixture</span>):</span><br><span class="line">    <span class="keyword">assert</span> param_fixture <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="Autouse-Fixtures"><a href="#Autouse-Fixtures" class="headerlink" title="Autouse Fixtures"></a>Autouse Fixtures</h3><p>If you want a fixture to be automatically used by tests without explicitly including it, set autouse&#x3D;True:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@pytest.fixture(<span class="params">autouse=<span class="literal">True</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">setup_environment</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Setting up environment&quot;</span>)</span><br><span class="line">    <span class="keyword">yield</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tearing down environment&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Best-Practices-for-Using-Fixtures"><a href="#Best-Practices-for-Using-Fixtures" class="headerlink" title="Best Practices for Using Fixtures"></a>Best Practices for Using Fixtures</h2><ol>
+<li><strong>Keep Fixtures Focused</strong>: Each fixture should handle a specific setup. This makes them easier to understand and reuse.</li>
+<li><strong>Use Descriptive Names</strong>: Name your fixtures clearly to indicate their purpose.</li>
+<li><strong>Avoid Global State</strong>: Ensure your fixtures do not rely on or modify global state to prevent side effects in tests.</li>
+<li><strong>Combine Fixtures</strong>: You can use multiple fixtures in a single test by including them as parameters.</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Fixtures are an essential feature in <code>pytest</code> that can greatly enhance your testing strategy. By leveraging fixtures, you can write cleaner, more maintainable tests while reducing redundancy. For further exploration, refer to the <a href="https://docs.pytest.org/en/stable/">official pytest documentation</a>.</p>
+]]></content>
+      <categories>
+        <category>Pytest</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pytest</tag>
+        <tag>fixtures</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python Testing</title>
+    <url>/Pytest/Python-Testing/</url>
+    <content><![CDATA[<h1 id="A-Beginner’s-Guide-to-Python-Unit-Testing-with-Pytest"><a href="#A-Beginner’s-Guide-to-Python-Unit-Testing-with-Pytest" class="headerlink" title="A Beginner’s Guide to Python Unit Testing with Pytest"></a>A Beginner’s Guide to Python Unit Testing with Pytest</h1><p>Unit testing is an essential practice in software development that helps ensure your code behaves as expected. This guide will introduce you to the basics of unit testing in Python using the <code>pytest</code> framework.</p>
+<h2 id="What-is-Unit-Testing"><a href="#What-is-Unit-Testing" class="headerlink" title="What is Unit Testing?"></a>What is Unit Testing?</h2><p>Unit testing involves testing individual components of your code (usually functions or classes) to verify that they work correctly. This practice helps catch bugs early and makes your code more maintainable.</p>
+<h2 id="Why-Unit-Test"><a href="#Why-Unit-Test" class="headerlink" title="Why Unit Test?"></a>Why Unit Test?</h2><ul>
+<li><strong>Catch Bugs Early</strong>: Identify issues before they become larger problems.</li>
+<li><strong>Simplify Integration</strong>: Ensure that each part of your code works independently.</li>
+<li><strong>Facilitate Refactoring</strong>: Make changes to your code with confidence that existing functionality is preserved.</li>
+<li><strong>Documentation</strong>: Provide examples of how your code is intended to be used.</li>
+</ul>
+<h2 id="Introducing-Pytest"><a href="#Introducing-Pytest" class="headerlink" title="Introducing Pytest"></a>Introducing Pytest</h2><p><code>pytest</code> is a popular testing framework for Python that makes it easy to write simple and scalable test cases. It offers powerful features like fixtures, parameterized testing, and a rich ecosystem of plugins.</p>
+<h3 id="Installing-Pytest"><a href="#Installing-Pytest" class="headerlink" title="Installing Pytest"></a>Installing Pytest</h3><p>To get started with <code>pytest</code>, you need to install it. You can do this using pip:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pytest</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="Getting-Started-with-Pytest"><a href="#Getting-Started-with-Pytest" class="headerlink" title="Getting Started with Pytest"></a>Getting Started with Pytest</h3><ol>
+<li><p>Writing Your First Test<br>Here’s a simple example. Suppose you have a function that adds two numbers:</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># calculator.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br></pre></td></tr></table></figure>
+
+<p> Now, let’s write a unit test for this function using pytest:</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># test_calculator.py</span></span><br><span class="line"><span class="keyword">from</span> calculator <span class="keyword">import</span> add</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_add</span>():</span><br><span class="line">    <span class="keyword">assert</span> add(<span class="number">1</span>, <span class="number">2</span>) == <span class="number">3</span></span><br><span class="line">    <span class="keyword">assert</span> add(-<span class="number">1</span>, <span class="number">1</span>) == <span class="number">0</span></span><br><span class="line">    <span class="keyword">assert</span> add(<span class="number">0</span>, <span class="number">0</span>) == <span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Running Your Tests<br>To run your tests, open your terminal, navigate to the directory containing your test_calculator.py file, and execute:</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pytest</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>You should see output indicating whether your tests passed or failed.</p>
+<ol start="3">
+<li>Writing More Tests<br>As your codebase grows, you’ll want to write more tests. Here are some tips:<ul>
+<li><p>Test Functions: Each test should be a standalone function prefixed with test_.</p>
+</li>
+<li><p>Fixtures: Use fixtures to set up any necessary state or dependencies for your tests.</p>
+<p>  Example of Using Fixtures</p>
+  <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pytest</span><br><span class="line"><span class="keyword">from</span> calculator <span class="keyword">import</span> add</span><br><span class="line"></span><br><span class="line"><span class="meta">@pytest.fixture</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">numbers</span>():</span><br><span class="line">    <span class="keyword">return</span> (<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">test_add</span>(<span class="params">numbers</span>):</span><br><span class="line">    a, b = numbers</span><br><span class="line">    <span class="keyword">assert</span> add(a, b) == <span class="number">15</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="Best-Practices-for-Unit-Testing-with-Pytest"><a href="#Best-Practices-for-Unit-Testing-with-Pytest" class="headerlink" title="Best Practices for Unit Testing with Pytest"></a>Best Practices for Unit Testing with Pytest</h3><ul>
+<li>Keep Tests Isolated: Each test should be independent of others.</li>
+<li>Name Your Tests Clearly: Use descriptive names for your test functions.</li>
+<li>Run Tests Frequently: Integrate running tests into your development workflow.</li>
+<li>Use Plugins: Explore pytest plugins for additional functionality.</li>
+</ul>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Unit testing is a powerful tool that helps maintain code quality. By following this guide and using pytest, you can start writing your own unit tests in Python, ensuring that your code is reliable and easier to maintain.</p>
+]]></content>
+      <categories>
+        <category>Pytest</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>pytest</tag>
+        <tag>tests</tag>
+        <tag>unit tests</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management Headless Chicken</title>
+    <url>/Project-Management/Project-Management-Headless-Chicken/</url>
+    <content><![CDATA[<h2 id="Unclear-and-Uncertain-requirements"><a href="#Unclear-and-Uncertain-requirements" class="headerlink" title="Unclear and Uncertain requirements"></a>Unclear and Uncertain requirements</h2><p>“Unclear requirements” and “uncertain requirements” are two major categories that contribute significantly to the failure of software projects.</p>
+<h3 id="The-Phrase-“Chicken-Without-a-Head”-in-Project-Management"><a href="#The-Phrase-“Chicken-Without-a-Head”-in-Project-Management" class="headerlink" title="The Phrase “Chicken Without a Head” in Project Management"></a>The Phrase “Chicken Without a Head” in Project Management</h3><p>The phrase “chicken without a head” in project management refers to a situation where team members are busy but lack clear direction and planning, resulting in chaotic execution, much like a headless chicken running around aimlessly.</p>
+<h3 id="Background-of-the-Idiom"><a href="#Background-of-the-Idiom" class="headerlink" title="Background of the Idiom"></a>Background of the Idiom</h3><ul>
+<li><strong>Metaphor of a Headless Chicken</strong>: A headless chicken is one that continues to run around after being decapitated, symbolizing chaos and a lack of control and direction.</li>
+<li><strong>Application in Project Management</strong>: In project management, without clear goals, plans, and communication, team members may act independently, leading to actions that are inconsistent with project objectives, resulting in wasted resources and project failure.</li>
+</ul>
+<h3 id="Ways-to-Avoid-the-Headless-Chicken-State"><a href="#Ways-to-Avoid-the-Headless-Chicken-State" class="headerlink" title="Ways to Avoid the Headless Chicken State"></a>Ways to Avoid the Headless Chicken State</h3><ol>
+<li><strong>Clear Project Goals</strong>: Ensure all members understand the ultimate objectives of the project.</li>
+<li><strong>Detailed Planning</strong>: Develop a comprehensive project plan covering aspects such as time, scope, and cost.</li>
+<li><strong>Effective Communication</strong>: Maintain good communication within the team to ensure transparency and information sharing.</li>
+<li><strong>Regular Progress Reviews</strong>: Regularly check project progress and adjust plans as needed to respond to changes.</li>
+</ol>
+<p>This idiom serves as a reminder for project managers and team members to prioritize planning and management to avoid falling into a disordered state.</p>
+<hr>
+<h2 id="需求不清-需求不確"><a href="#需求不清-需求不確" class="headerlink" title="需求不清 需求不確"></a>需求不清 需求不確</h2><p>「需求不清」與「需求不確」兩大類，是造成軟體專案失敗的重大原因。</p>
+<h3 id="「專案管理無頭雞」的典故"><a href="#「專案管理無頭雞」的典故" class="headerlink" title="「專案管理無頭雞」的典故"></a>「專案管理無頭雞」的典故</h3><p>「專案管理無頭雞」這個典故源自於專案管理中，形容在缺乏明確方向和計劃的情況下，團隊成員像無頭雞一樣忙亂，無法有效地協作與執行任務。</p>
+<h3 id="典故背景"><a href="#典故背景" class="headerlink" title="典故背景"></a>典故背景</h3><ul>
+<li><strong>無頭雞的比喻</strong>：無頭雞是指一隻被斬首的雞，仍然會在地上四處亂跑，這種狀態象徵著缺乏控制和方向的混亂。</li>
+<li><strong>專案管理中的應用</strong>：在專案管理中，如果沒有清晰的目標、計劃和溝通，團隊成員可能會各自為政，做出與專案目標不一致的行動，導致資源浪費和專案失敗。</li>
+</ul>
+<h3 id="避免無頭雞狀態的方法"><a href="#避免無頭雞狀態的方法" class="headerlink" title="避免無頭雞狀態的方法"></a>避免無頭雞狀態的方法</h3><ol>
+<li><strong>明確的專案目標</strong>：確保所有成員了解專案的最終目標。</li>
+<li><strong>詳細的計劃</strong>：制定周全的專案計劃，涵蓋時間、範圍、成本等方面。</li>
+<li><strong>有效的溝通</strong>：保持團隊之間的良好溝通，確保信息的透明與共享。</li>
+<li><strong>定期檢視進度</strong>：定期檢查專案進度，及時調整計劃以應對變化。</li>
+</ol>
+<p>這個典故提醒專案經理和團隊成員，必須重視專案的規劃與管理，以避免陷入無序的狀態。</p>
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+      <tags>
+        <tag>Story</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Project Management - Integration</title>
+    <url>/Project-Management/Project-Management-Integration/</url>
+    <content><![CDATA[<h2 id="Integrate-Management-Processes"><a href="#Integrate-Management-Processes" class="headerlink" title="Integrate Management Processes"></a>Integrate Management Processes</h2><table>
+<thead>
+<tr>
+<th>No</th>
+<th>Process</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4.1</td>
+<td>Develop Project Charter</td>
+<td>Produce the project charter and obtain authorization, focusing on the project’s benefits.</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Develop Preliminary Project Scope Statement</td>
+<td>Produce the preliminary project scope statement, outlining the general scope.</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Develop Project Management Plan</td>
+<td>Create a project management plan to coordinate various plans.</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Direct and Manage Project Execution</td>
+<td>Execute the project management plan to achieve the objectives outlined in the project scope statement.</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>Monitor and Control Project Work</td>
+<td>Monitor all processes to achieve the performance goals in the project management plan.</td>
+</tr>
+<tr>
+<td>4.6</td>
+<td>Integrated Change Control</td>
+<td>Review all change requests, approve changes, and control changes.</td>
+</tr>
+<tr>
+<td>4.7</td>
+<td>Close Project</td>
+<td>Formally close the project.</td>
+</tr>
+</tbody></table>
+<h2 id="Common-Tools"><a href="#Common-Tools" class="headerlink" title="Common Tools"></a>Common Tools</h2><ol>
+<li><p><strong>Visualize Goals</strong><br>Sometimes we fall into the trap of doing things just for the sake of doing them, blindly following plans and forgetting what the goals are. Therefore, the goals should be placed in the most visible areas that many people pass by.</p>
+</li>
+<li><p><strong>Go and See</strong><br>Going to the site allows us to discover many things that are not documented.</p>
+</li>
+<li><p><strong>Time Management Matrix (Urgency VS Importance Matrix)</strong></p>
+</li>
+</ol>
+
+]]></content>
+      <categories>
+        <category>Project Management</category>
+      </categories>
+  </entry>
+</search>
