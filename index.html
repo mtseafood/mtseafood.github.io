@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An epic Tower Defense game built with HTML5 Canvas. Place towers, defeat waves of enemies, and protect your base!">
+    <title>Tower Defense — Defend the Realm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header id="top-bar">
+            <h1>⚔️ Tower Defense</h1>
+            <div id="stats-bar">
+                <div class="stat" id="stat-gold">
+                    <span class="stat-icon">💰</span>
+                    <span class="stat-label">Gold</span>
+                    <span class="stat-value" id="gold-display">200</span>
+                </div>
+                <div class="stat" id="stat-lives">
+                    <span class="stat-icon">❤️</span>
+                    <span class="stat-label">Lives</span>
+                    <span class="stat-value" id="lives-display">20</span>
+                </div>
+                <div class="stat" id="stat-wave">
+                    <span class="stat-icon">🌊</span>
+                    <span class="stat-label">Wave</span>
+                    <span class="stat-value" id="wave-display">0 / 15</span>
+                </div>
+                <div class="stat" id="stat-score">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="score-display">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="game-area">
+            <canvas id="game-canvas"></canvas>
+
+            <aside id="sidebar">
+                <div class="panel" id="towers-panel">
+                    <h2>Towers</h2>
+                    <div id="tower-list">
+                        <button class="tower-card" data-tower="archer" id="btn-archer">
+                            <div class="tower-icon">🏹</div>
+                            <div class="tower-info">
+                                <span class="tower-name">Archer</span>
+                                <span class="tower-cost">50g</span>
+                            </div>
+                            <div class="tower-stats">DMG 15 · Fast</div>
+                        </button>
+                        <button class="tower-card" data-tower="fire" id="btn-fire">
+                            <div class="tower-icon">🔥</div>
+                            <div class="tower-info">
+                                <span class="tower-name">Fire</span>
+                                <span class="tower-cost">100g</span>
+                            </div>
+                            <div class="tower-stats">DMG 30 · Splash</div>
+                        </button>
+                        <button class="tower-card" data-tower="ice" id="btn-ice">
+                            <div class="tower-icon">❄️</div>
+                            <div class="tower-info">
+                                <span class="tower-name">Ice</span>
+                                <span class="tower-cost">75g</span>
+                            </div>
+                            <div class="tower-stats">DMG 10 · Slow</div>
+                        </button>
+                        <button class="tower-card" data-tower="lightning" id="btn-lightning">
+                            <div class="tower-icon">⚡</div>
+                            <div class="tower-info">
+                                <span class="tower-name">Lightning</span>
+                                <span class="tower-cost">150g</span>
+                            </div>
+                            <div class="tower-stats">DMG 50 · Chain</div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel" id="info-panel">
+                    <h2>Info</h2>
+                    <div id="info-content">
+                        <p class="hint">Select a tower to place, then click on the map. Right-click to cancel.</p>
+                    </div>
+                </div>
+
+                <div class="panel" id="controls-panel">
+                    <button id="btn-start-wave" class="btn-primary">▶ Start Wave</button>
+                    <div class="btn-row">
+                        <button id="btn-fast" class="btn-secondary" title="Toggle speed">⏩ 1x</button>
+                        <button id="btn-sell" class="btn-secondary btn-danger" title="Sell selected tower">🗑️ Sell</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Overlay screens -->
+    <div id="overlay" class="overlay hidden">
+        <div class="overlay-content" id="overlay-inner"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
